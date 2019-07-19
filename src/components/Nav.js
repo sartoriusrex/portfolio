@@ -1,43 +1,18 @@
 import React, { useState } from 'react';
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { colors } from '../styles/variables';
+import { FlickerButton } from '../styles/animations';
 
 const Navbar = styled.nav`
   display: flex;
   background-color: black;
   width: 100%;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   display: flex;
   justify-content: space-between;
   max-width: 25rem;
-`
-
-const flicker = keyframes`
-  0%, .6%, 1.2% {
-    box-shadow: none;
-  }
-  .3%, .9%, 3%, 100% {
-    box-shadow: 
-      inset 0 0 1px #FFF,
-      0 0 1px #fff,           
-      
-      inset 2px 0 2px ${ colors.blue },  
-      inset -2px 0 2px ${ colors.blue }, 
-      inset 0 2px 2px ${ colors.blue },
-      inset 0 -2px 2px ${ colors.blue },
-      
-      inset 2px 0 5px ${ colors.blue },  
-      inset -2px 0 5px ${ colors.blue }, 
-      inset 0 2px 7px ${ colors.blue }, 
-      inset 0 -2px 5px ${ colors.blue }, 
-      
-      -3px 0 6px ${ colors.blue },  
-      3px 0 6px ${ colors.blue },
-      0 3px 6px ${ colors.blue },
-      0 -3px 6px ${ colors.blue };
-  }
 `
 
 const Button = styled.button`
@@ -103,7 +78,7 @@ const Button = styled.button`
       0 -3px 6px ${ colors.blue };
 
     animation:
-      15s 1s infinite ${ flicker };
+      15s 1s infinite ${ FlickerButton };
   `}
 `
 

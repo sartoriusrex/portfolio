@@ -5,6 +5,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import background from './images/background-left.jpg';
 import { colors } from './styles/variables';
 import Nav from './components/Nav';
+import LandingSection from './sections/Landing';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=swap');
@@ -38,10 +39,9 @@ const AppWrapper = styled.main`
       rgb( 115, 3, 192, .1 ), 
       ${ colors.blackOverlay } 20%
     ),
-    fixed top / contain no-repeat url(${ background }),
+    fixed top left / contain no-repeat url(${ background }),
     rgba( 0, 0, 0 );
   width: 100%;
-  height: 200vh;
 `
 
 const App = () => (
@@ -49,6 +49,7 @@ const App = () => (
     <Normalize />
     <GlobalStyle />
     <AppWrapper>
+      <LandingSection />
       <Nav />
     </AppWrapper>
   </>
