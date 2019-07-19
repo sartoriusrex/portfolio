@@ -8,6 +8,7 @@ const FirstSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
 `
@@ -17,11 +18,11 @@ const TitleContainer = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: .5em;
-  width: 90%;
-  height: 5em;
+  width: 95%;
+  height: 6em;
   max-width: 25rem;
-  margin: 30px auto;
-  padding: 0px 1em;
+  margin: 30px 10px;
+  padding: .5em;
   box-shadow: 
     inset 0 0 10px #FFF,
     0 0 10px #fff,           
@@ -45,7 +46,7 @@ const TitleContainer = styled.div`
 
 const Intro = styled.h1`
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-right: 1rem;
 `
 
@@ -54,7 +55,7 @@ const Name = styled.h1`
 
   color: white;
   font-family: "Nixie One", sans-serif;
-  font-size: 1.8em;
+  font-size: 1.6em;
   text-align: center;
   text-shadow:
     0 0 10px #fff, 
@@ -76,8 +77,18 @@ const LetterD = styled.span`
   animation: 5s 4s infinite ${ FlickerLetter };
 `
 
-const SubtitleCOntainer = styled.div`
-  
+const SubtitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 85%;
+  max-width: 18em;
+  height: 6em;
+`
+
+const SubtitleParagraph = styled.p`
+  font-size: 1.4em;
+  text-align: left;
+  color: white;
 `
 
 const LandingSection = () => {
@@ -93,6 +104,11 @@ const LandingSection = () => {
           ai
         </Name>
       </TitleContainer>
+      <SubtitleContainer>
+        <SubtitleParagraph>
+          I build Internet stuff and solve problems
+        </SubtitleParagraph>
+      </SubtitleContainer>
     </FirstSection>
   )
 }
