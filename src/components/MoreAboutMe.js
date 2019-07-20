@@ -22,6 +22,7 @@ const MoreAboutMeText = styled.p`
   top: 0;
   left: 0;
   width: 100%;
+  height: 9em;
   font-size: .7em;
   color: white;
   text-align: justify;

@@ -6,6 +6,7 @@ import BioContainer from '../components/BioSection';
 import ReadMoreButton from '../components/ReadMoreButton';
 import MoreAboutMe from '../components/MoreAboutMe';
 import Love from '../components/Love';
+import Use from '../components/Use';
 
 
 const SecondSection = styled.section`
@@ -63,6 +64,7 @@ const AboutMeSection = () => {
       <MoreAboutMe visible={ visible }/>
       <HorizontalRule deg="5deg" />
       <Love />
+      <Use />
       <HorizontalRule deg="-5deg" />
     </SecondSection>
   )

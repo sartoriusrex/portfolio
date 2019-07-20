@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import { colors } from '../styles/variables';
 import { BioDescriptionText, Brackets } from '../styles/general';
 
 const LoveContainer = styled.div`
   width: 90%;
   max-width: 25em;
   margin-bottom: 2em;
+  padding-left: 2em;
 `
 
 const List = styled.ul`
