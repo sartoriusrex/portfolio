@@ -199,7 +199,7 @@ export const TitleGlow = keyframes`
 export const AboutMeAppear = keyframes`
   from {
     opacity: 0;
-    transform: translateY( -8em );
+    transform: translateY( -2em );
   }
   to {
     opacity: 1;
@@ -212,7 +212,7 @@ export const AboutMeDisappear = keyframes`
   }
   to {
     opacity: 0;
-    transform: translateY( -8em );
+    transform: translateY( -2em );
 `
 
 export const AboutMeTextAppear = keyframes`
@@ -221,12 +221,14 @@ export const AboutMeTextAppear = keyframes`
   }
   to {
     opacity: 1;
+    background-color: rgba(0,0,0,.7);
   }
 `
 
 export const AboutMeTextDisappear = keyframes`
   from {
     opacity: 1;
+    background-color: rgba(0,0,0,.7);
   }
   to {
     opacity: 0;

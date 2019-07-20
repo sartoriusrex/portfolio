@@ -7,9 +7,8 @@ const MoreAboutMeContainer = styled.div`
   width: 90%;
   max-width: 25em;
   margin: .5em 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  z-index: 10;
   will-change: opacity, transform;
 
   ${ props => props.visible ?
@@ -19,9 +18,14 @@ const MoreAboutMeContainer = styled.div`
 `
 
 const MoreAboutMeText = styled.p`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   font-size: .7em;
   color: white;
   text-align: justify;
+  z-index: 10;
 
   ${ props => props.visible ?
     css`animation: 500ms ${ AboutMeTextAppear } cubic-bezier(0,.33,.09,.99) forwards` :

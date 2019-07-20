@@ -15,6 +15,34 @@ const SecondSection = styled.section`
   min-height: 100vh;
 `
 
+const HorizontalRule = styled.hr`
+  width: 100%;
+  max-width: 30em;
+  overflow: hidden;
+  border: none;
+  margin: 30px 0;
+  height: .1em;
+  transform: ${ props => `rotate(${ props.deg })`};
+  box-shadow: 
+    inset 0 0 5px #FFF,
+    0 0 5px #fff,           
+    
+    inset 5px 0 5px #9D72FF,  
+    inset -5px 0 5px #9D72FF, 
+    inset 0 5px 5px #9D72FF,
+    inset 0 -5px 5px #9D72FF,
+    
+    inset 5px 0 7px #9D72FF,  
+    inset -5px 0 7px #9D72FF, 
+    inset 0 5px 7px #9D72FF, 
+    inset 0 -5px 7px #9D72FF, 
+    
+    -7px 0 10px #9D72FF,  
+    7px 0 10px #9D72FF,
+    0 7px 10px #9D72FF,
+    0 -7px 10px #9D72FF;
+`
+
 const AboutMeSection = () => {
   const [ visible, setVisible ] = useState( false );
 
@@ -32,6 +60,8 @@ const AboutMeSection = () => {
         visible={ visible }
       />
       <MoreAboutMe visible={ visible }/>
+      <HorizontalRule deg="5deg" />
+      <HorizontalRule deg="-5deg" />
     </SecondSection>
   )
 }
