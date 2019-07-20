@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import BioContainer from '../components/BioSection';
 import ReadMoreButton from '../components/ReadMoreButton';
 import MoreAboutMe from '../components/MoreAboutMe';
+import Love from '../components/Love';
 
 
 const SecondSection = styled.section`
@@ -21,7 +22,7 @@ const HorizontalRule = styled.hr`
   overflow: hidden;
   border: none;
   margin: 30px 0;
-  height: .1em;
+  height: .3em;
   transform: ${ props => `rotate(${ props.deg })`};
   box-shadow: 
     inset 0 0 5px #FFF,
@@ -61,6 +62,7 @@ const AboutMeSection = () => {
       />
       <MoreAboutMe visible={ visible }/>
       <HorizontalRule deg="5deg" />
+      <Love />
       <HorizontalRule deg="-5deg" />
     </SecondSection>
   )

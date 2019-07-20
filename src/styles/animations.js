@@ -109,93 +109,6 @@ export const FlickerLetter = keyframes`
   }
 `
 
-export const ImageGlow = keyframes`
-  0%, 100% {
-    box-shadow: 
-      inset 0 0 10px #FFF,
-      0 0 10px #fff,           
-      
-      inset 5px 0 5px ${ colors.purple },  
-      inset -5px 0 5px ${ colors.purple }, 
-      inset 0 5px 5px ${ colors.purple },
-      inset 0 -5px 5px ${ colors.purple },
-      
-      inset 5px 0 7px ${ colors.purple },  
-      inset -5px 0 7px ${ colors.purple }, 
-      inset 0 5px 7px ${ colors.purple }, 
-      inset 0 -5px 7px ${ colors.purple }, 
-      
-      -7px 0 10px ${ colors.purple },  
-      7px 0 10px ${ colors.purple },
-      0 7px 10px ${ colors.purple },
-      0 -7px 10px ${ colors.purple };
-  }
-  50% {
-    box-shadow: 
-      inset 0 0 10px #FFF,
-      0 0 10px #fff,           
-      
-      inset 7px 0 7px ${ colors.purple },  
-      inset -7px 0 7px ${ colors.purple }, 
-      inset 0 7px 7px ${ colors.purple },
-      inset 0 -7px 7px ${ colors.purple },
-      
-      inset 7px 0 9px ${ colors.purple },  
-      inset -7px 0 9px ${ colors.purple }, 
-      inset 0 7px 9px ${ colors.purple }, 
-      inset 0 -7px 9px ${ colors.purple }, 
-      
-      -9px 0 11px ${ colors.purple },  
-      9px 0 11px ${ colors.purple },
-      0 9px 11px ${ colors.purple },
-      0 -9px 11px ${ colors.purple };
-  }
-`
-
-export const FromTextGlow = keyframes`
-  0%, 100% {
-    text-shadow:
-      0 0 10px #fff, 
-      0 0 20px ${ colors.turquoise }, 
-      0 0 30px ${ colors.turquoise }, 
-      0 0 40px ${ colors.turquoise }, 
-      0 0 70px ${ colors.turquoise };
-  }
-  50% {
-    text-shadow:
-      0 0 10px #fff, 
-      0 0 25px ${ colors.turquoise }, 
-      0 0 35px ${ colors.turquoise }, 
-      0 0 45px ${ colors.turquoise }, 
-      0 0 75px ${ colors.turquoise };
-  }
-`
-
-export const TitleGlow = keyframes`
-  0%, 100% {
-    text-shadow:
-      0 0 10px #fff, 
-      0 0 20px ${ colors.purple }, 
-      0 0 30px ${ colors.purple }, 
-      0 0 40px ${ colors.purple }, 
-      0 0 70px ${ colors.purple }, 
-      0 0 80px ${ colors.purple }, 
-      0 0 100px ${ colors.purple }, 
-      0 0 150px ${ colors.purple };
-  }
-  50% {
-    text-shadow:
-    0 0 10px #fff, 
-    0 0 25px ${ colors.purple }, 
-    0 0 35px ${ colors.purple }, 
-    0 0 45px ${ colors.purple }, 
-    0 0 75px ${ colors.purple }, 
-    0 0 85px ${ colors.purple }, 
-    0 0 105px ${ colors.purple }, 
-    0 0 155px ${ colors.purple };
-  }
-`
-
 export const AboutMeAppear = keyframes`
   from {
     opacity: 0;
@@ -221,14 +134,14 @@ export const AboutMeTextAppear = keyframes`
   }
   to {
     opacity: 1;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.8);
   }
 `
 
 export const AboutMeTextDisappear = keyframes`
   from {
     opacity: 1;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.8);
   }
   to {
     opacity: 0;

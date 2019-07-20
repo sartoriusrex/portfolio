@@ -13,6 +13,7 @@ const Button = styled.button`
   border: none;
   color: #808080;
   font-size: .7em;
+  z-index: 100;
 
   &:active,
   &:focus {

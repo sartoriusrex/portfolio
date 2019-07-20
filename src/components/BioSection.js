@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import BioImg from '../images/bio.jpeg';
 import { colors } from '../styles/variables';
-import { ImageGlow, FromTextGlow, TitleGlow } from '../styles/animations';
 
 const BioSection = styled.div`
   width: 90%;
@@ -39,7 +38,6 @@ const BioPicContainer = styled.div`
     7px 0 10px ${ colors.purple },
     0 7px 10px ${ colors.purple },
     0 -7px 10px ${ colors.purple };
-    animation: 7s ${ ImageGlow } infinite;
 `
 
 const BioPic = styled.img`
@@ -73,7 +71,6 @@ const BioTitle = styled.h2`
     0 0 80px ${ colors.purple }, 
     0 0 100px ${ colors.purple }, 
     0 0 150px ${ colors.purple };
-  animation: 4s .5s ${ TitleGlow } infinite;
 `
 
 const BioDescription = styled.p`
@@ -81,7 +78,7 @@ const BioDescription = styled.p`
   color: white;
   max-width: 15em;
   width: 80%;
-  font-size: .7em;
+  font-size: .8em;
 `
 
 const BioPlace = styled.p`
@@ -94,7 +91,6 @@ const BioPlace = styled.p`
     0 0 30px ${ colors.turquoise }, 
     0 0 40px ${ colors.turquoise }, 
     0 0 70px ${ colors.turquoise };
-  animation: 6s ${ FromTextGlow } infinite;
 `
 
 const BioContainer = () => (

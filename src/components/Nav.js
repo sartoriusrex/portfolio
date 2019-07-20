@@ -78,7 +78,7 @@ const Button = styled.button`
       0 -3px 6px ${ colors.blue };
 
     animation:
-      15s 1s infinite ${ FlickerButton };
+      10s 1s 2 ${ FlickerButton };
   `}
 `
 
