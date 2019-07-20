@@ -18,7 +18,7 @@ const TitleContainer = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: .5em;
-  width: 95%;
+  width: 90%;
   height: 6em;
   max-width: 25rem;
   margin: 30px 10px;
@@ -41,13 +41,14 @@ const TitleContainer = styled.div`
     7px 0 10px ${ colors.purple },
     0 7px 10px ${ colors.purple },
     0 -7px 10px ${ colors.purple };
-  animation: 2s .5s ${ TurnOnBorder };
+  animation: 2s 1s ${ TurnOnBorder };
 `
 
 const Intro = styled.h1`
   color: white;
   font-size: 1.4rem;
   margin-right: 1rem;
+  font-weight: normal;
 `
 
 const Name = styled.h1`
@@ -66,7 +67,7 @@ const Name = styled.h1`
     0 0 80px ${ colors.purple }, 
     0 0 100px ${ colors.purple }, 
     0 0 150px ${ colors.purple };
-  animation: 2s .5s ${ TurnOnName };
+  animation: 2s 1s ${ TurnOnName };
 `
 
 const LetterM = styled.span`
@@ -74,7 +75,7 @@ const LetterM = styled.span`
 `
 
 const LetterD = styled.span`
-  animation: 5s 4s infinite ${ FlickerLetter };
+  animation: 5s 3s infinite ${ FlickerLetter };
 `
 
 const SubtitleContainer = styled.div`

@@ -6,6 +6,7 @@ import background from './images/background-left.jpg';
 import { colors } from './styles/variables';
 import Nav from './components/Nav';
 import LandingSection from './sections/Landing';
+import AboutMeSection from './sections/AboutMe';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=swap');
@@ -50,6 +51,7 @@ const App = () => (
     <GlobalStyle />
     <AppWrapper>
       <LandingSection />
+      <AboutMeSection />
       <Nav />
     </AppWrapper>
   </>

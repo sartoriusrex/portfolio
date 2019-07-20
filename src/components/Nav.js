@@ -6,7 +6,7 @@ import { FlickerButton } from '../styles/animations';
 
 const Navbar = styled.nav`
   display: flex;
-  background-color: black;
+  background-color: transparent;
   width: 100%;
   position: sticky;
   bottom: 0;
@@ -26,7 +26,7 @@ const Button = styled.button`
   border-radius: .5em;
   border: .5px solid white;
   padding: 1em;
-  background-color: transparent;
+  background-color: black;
   font-size: .8em;
   box-shadow: 
     inset 0 0 1px #FFF,
