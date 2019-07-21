@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import BioImg from '../images/bio.jpeg';
 import { colors } from '../styles/variables';
+import content from '../content';
 
 const BioSection = styled.div`
   width: 90%;
@@ -11,6 +12,7 @@ const BioSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1rem;
 `
 
 const BioPicContainer = styled.div`
@@ -99,9 +101,9 @@ const BioContainer = () => (
       <BioPic src={ BioImg }/>
     </BioPicContainer>
     <BioTextContainer>
-      <BioTitle>Dennis Mai</BioTitle>
-      <BioDescription>Self-taught Web Developer, Avid Learner, and Jiu Jitero living in</BioDescription>
-      <BioPlace>{`{ Hawaii: Kauai }`} </BioPlace>
+      <BioTitle>{ content.bio.title }</BioTitle>
+      <BioDescription>{ content.bio.description }</BioDescription>
+      <BioPlace>{ content.bio.place } </BioPlace>
     </BioTextContainer>
   </BioSection>
 )

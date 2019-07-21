@@ -2,6 +2,7 @@ import React from 'react';
 import styled,{ css } from 'styled-components';
 
 import { colors } from '../styles/variables';
+import content from '../content';
 
 
 const MoreAboutMeContainer = styled.div`
@@ -39,8 +40,7 @@ const MoreAboutMeText = styled.p`
 const MoreAboutMe = ({ visible }) => (
   <MoreAboutMeContainer visible={ visible }>
     <MoreAboutMeText visible={ visible }>
-      Born and raised in raised in Wichita, Kansas to immigrant, 
-      Vietnamese parents. Studied abroad in Murcia, Spain where I met my Swiss wife. Moved to Zurich, Switzerland and tasted the start-up life. Fell in love with Brazilian Jiu Jitsu. Witnessed the birth of my daughter. Moved to Hawaii, where we all live & play today. Life is Good.
+      { content.about }
     </MoreAboutMeText>
   </MoreAboutMeContainer>
 )

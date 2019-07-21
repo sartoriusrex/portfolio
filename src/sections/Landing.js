@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { TurnOnBorder, TurnOnName, FlickerLetter } from '../styles/animations';
 import { colors } from '../styles/variables';
+import content from '../content';
 
 const FirstSection = styled.section`
   display: flex;
@@ -96,7 +97,7 @@ const LandingSection = () => {
   return(
     <FirstSection>
       <TitleContainer>
-        <Intro>Hey, I'm</Intro>
+        <Intro>{ content.landing.intro }</Intro>
         <Name>
           <LetterD>D</LetterD>
           ennis
@@ -107,7 +108,7 @@ const LandingSection = () => {
       </TitleContainer>
       <SubtitleContainer>
         <SubtitleParagraph>
-          I build Internet stuff and solve problems
+          { content.landing.subtitle }
         </SubtitleParagraph>
       </SubtitleContainer>
     </FirstSection>

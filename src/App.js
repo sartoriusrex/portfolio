@@ -7,6 +7,7 @@ import { colors } from './styles/variables';
 import Nav from './components/Nav';
 import LandingSection from './sections/Landing';
 import AboutMeSection from './sections/AboutMe';
+import ProjectSection from './sections/Projects';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=swap');
@@ -38,7 +39,7 @@ const AppWrapper = styled.main`
       rgb( 253, 239, 249, .2 ),
       rgb( 236, 56, 188, .2 ),
       rgb( 115, 3, 192, .1 ), 
-      ${ colors.blackOverlay } 20%
+      ${ colors.blackOverlay } 10%
     ),
     fixed top left / contain no-repeat url(${ background }),
     rgba( 0, 0, 0 );
@@ -52,6 +53,7 @@ const App = () => (
     <AppWrapper>
       <LandingSection />
       <AboutMeSection />
+      <ProjectSection />
       <Nav />
     </AppWrapper>
   </>
