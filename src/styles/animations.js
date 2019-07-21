@@ -9,8 +9,8 @@ export const FlickerButton = keyframes`
   .3%, .9%, 3%, 100% {
     box-shadow: 
       inset 0 0 1px #FFF,
-      0 0 1px #fff,           
-      
+      0 0 1px #fff,
+
       inset 2px 0 2px ${ colors.blue },  
       inset -2px 0 2px ${ colors.blue }, 
       inset 0 2px 2px ${ colors.blue },

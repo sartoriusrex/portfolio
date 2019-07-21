@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import content from '../content';
 import { colors } from '../styles/variables';
-import { ProjectItem, ProjectItemTextContainer, ProjectItemTitle, ProjectItemTechs, ProjectItemDesc, ProjectLinkContainer, ProjectLink } from '../styles/general';
+import { ProjectItem, ProjectItemTextContainer, ProjectItemTitle, ProjectItemTechs, ProjectItemDesc, ProjectLinkContainer, ProjectLink, ProjectPreview } from '../styles/general';
 
 const ThirdSection = styled.section`
   display: flex;
@@ -14,10 +14,12 @@ const ThirdSection = styled.section`
 `
 
 const ProjectSection = () => {
-  const [ project, setProject ] = useState( null );
+  const [ preview, setPreview ] = useState( null );
 
   const handleClick = subject => {
-    setProject( subject );
+    preview === subject ?
+    setPreview( null ) :
+    setPreview( subject );
   }
 
   const SectionHeader = styled.h2`
@@ -33,8 +35,6 @@ const ProjectSection = () => {
         <ProjectItem 
           key={ subject.short }
           color={ subject.color  }
-          className={ project === subject ? "selected" : null }
-          onClick={ () => handleClick( subject.short )} 
         >
           <ProjectItemTextContainer>
             <ProjectItemTitle color={ subject.color }>
@@ -50,6 +50,8 @@ const ProjectSection = () => {
               <ProjectLink 
                 as="button"
                 color={ subject.color }
+                onClick={ () => handleClick( subject.short )}
+                style={{background: "transparent", outline: "none", border: "none"}}
               >
                 Preview
               </ProjectLink>
@@ -74,6 +76,11 @@ const ProjectSection = () => {
                 </ProjectLink>
               }
             </ProjectLinkContainer>
+            { preview && preview === subject.short &&
+              <ProjectPreview src={ subject.gif } />
+            }
+            
+
           </ProjectItemTextContainer>
         </ProjectItem>
       )}

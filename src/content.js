@@ -1,5 +1,6 @@
 import { colors } from './styles/variables';
 import jjdImage from './images/jjd.png';
+import jjdGif from './images/jjd.gif';
 import usdtImage from './images/usdt.png';
 import ravenImage from './images/raven.png';
 import { ReactComponent as Email } from './images/email.svg';
@@ -25,7 +26,7 @@ const content = {
       title: "Jiu Jitsu Distilled",
       technologies: "React, Redux, React-Router, React-Form, MongoDB, Node, Express, Axios, Bootstrap, Mailgun, JWT, bcryptjs, Heroku",
       description: "I built this as a way of documenting and organizing Brazilian Jiu Jitsu techniques, their variations, and how they connect with each other in sequences.",
-      gif: "asdf",
+      gif: jjdGif,
       image: jjdImage,
       color: colors.blue,
       live: "https://jjd-client-v1.herokuapp.com/",

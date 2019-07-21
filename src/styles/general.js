@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { colors } from './variables';
 
@@ -69,7 +69,6 @@ export const ProjectItemDesc = styled.p`
   color: ${ props => props.color };
   font-size: .8em;
   margin-bottom: 1rem;
-
 `
 
 export const ProjectLinkContainer = styled.div`
@@ -92,4 +91,22 @@ export const ProjectLink = styled.a.attrs( props => ({
   &:hover {
     text-decoration: underline;
   }
+`
+
+export const ProjectPreview = styled.img.attrs( props => ({
+  src: props.src,
+  alt: "preview gif"
+}))`
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: scale( 0 );
+  transition: opacity 150ms ease-in, transform 150ms ease-in;
+  will-change: opacity, transform;
+
+  ${ props => props.src && css`
+    opacity: 1;
+    transform: scale( 1 );
+  `}
 `
