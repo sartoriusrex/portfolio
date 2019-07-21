@@ -1,20 +1,24 @@
 import React from 'react';
 import styled,{ css } from 'styled-components';
 
-import { AboutMeAppear, AboutMeDisappear, AboutMeTextAppear, AboutMeTextDisappear } from '../styles/animations';
+import { colors } from '../styles/variables';
+
 
 const MoreAboutMeContainer = styled.div`
-  width: 90%;
+  width: 100%;
   max-width: 25em;
   margin: .5em 0;
   position: relative;
   z-index: 10;
   will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY( -2em );
+  transition: transform 150ms ease-in, opacity 150ms ease-in;
 
-  ${ props => props.visible ?
-    css`animation: 500ms ${ AboutMeAppear } cubic-bezier(0,.33,.09,.99) forwards` :
-    css`animation: 500ms ${ AboutMeDisappear } cubic-bezier(0,.33,.09,.99) forwards`
-  }
+  ${ props => props.visible && css`
+    transform: translateY( 0em );
+    opacity: 1;
+  `}
 `
 
 const MoreAboutMeText = styled.p`
@@ -22,16 +26,14 @@ const MoreAboutMeText = styled.p`
   top: 0;
   left: 0;
   width: 100%;
-  height: 9em;
-  font-size: .7em;
+  font-size: .8em;
   color: white;
   text-align: justify;
   z-index: 10;
-
-  ${ props => props.visible ?
-    css`animation: 500ms ${ AboutMeTextAppear } cubic-bezier(0,.33,.09,.99) forwards` :
-    css`animation: 500ms ${ AboutMeTextDisappear } cubic-bezier(0,.33,.09,.99) forwards`
-  }
+  background-color: rgba( 0, 0, 0, .85 );
+  padding: 1em .5em;
+  border-top: 1px solid ${ colors.turquoise };
+  border-bottom: 1px solid ${ colors.turquoise };
 `
 
 const MoreAboutMe = ({ visible }) => (

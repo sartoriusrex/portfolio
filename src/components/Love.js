@@ -6,12 +6,12 @@ import { BioDescriptionText, Brackets } from '../styles/general';
 const LoveContainer = styled.div`
   width: 90%;
   max-width: 25em;
-  margin-bottom: 2em;
-  padding-left: 2em;
+  margin-bottom: 1em;
+  padding-left: 1em;
 `
 
 const List = styled.ul`
-  margin-left: 2rem;
+  margin-left: 1rem;
   margin-bottom: .1rem;
   list-style: none;
 `
@@ -26,9 +26,8 @@ const ListItem = styled.li`
 const Love = () => (
   <LoveContainer>
     <BioDescriptionText>
-      I love:
+      I love: <Brackets>[</Brackets>
     </BioDescriptionText>
-    <Brackets>[</Brackets>
     <List>
       <ListItem>“Building fast, responsive websites”,</ListItem>
       <ListItem>“Learning new technologies”,</ListItem>

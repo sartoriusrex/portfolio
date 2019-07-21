@@ -9,10 +9,9 @@ export const BioDescriptionText = styled.p`
   margin-bottom: .5em;
 `
 
-export const Brackets = styled.p`
+export const Brackets = styled.span`
   color: ${ colors.blue };
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: .3em;
-  margin-left: 1rem;
 `

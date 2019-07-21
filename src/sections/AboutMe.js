@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-// import { colors } from '../styles/variables';
+import { colors } from '../styles/variables';
 import BioContainer from '../components/BioSection';
 import ReadMoreButton from '../components/ReadMoreButton';
 import MoreAboutMe from '../components/MoreAboutMe';
@@ -22,27 +22,27 @@ const HorizontalRule = styled.hr`
   max-width: 30em;
   overflow: hidden;
   border: none;
-  margin: 30px 0;
+  margin: 1em 0;
   height: .3em;
   transform: ${ props => `rotate(${ props.deg })`};
   box-shadow: 
     inset 0 0 5px #FFF,
     0 0 5px #fff,           
     
-    inset 5px 0 5px #9D72FF,  
-    inset -5px 0 5px #9D72FF, 
-    inset 0 5px 5px #9D72FF,
-    inset 0 -5px 5px #9D72FF,
+    inset 5px 0 5px ${ colors.purple },  
+    inset -5px 0 5px ${ colors.purple }, 
+    inset 0 5px 5px ${ colors.purple },
+    inset 0 -5px 5px ${ colors.purple },
     
-    inset 5px 0 7px #9D72FF,  
-    inset -5px 0 7px #9D72FF, 
-    inset 0 5px 7px #9D72FF, 
-    inset 0 -5px 7px #9D72FF, 
+    inset 5px 0 7px ${ colors.purple },  
+    inset -5px 0 7px ${ colors.purple }, 
+    inset 0 5px 7px ${ colors.purple }, 
+    inset 0 -5px 7px ${ colors.purple }, 
     
-    -7px 0 10px #9D72FF,  
-    7px 0 10px #9D72FF,
-    0 7px 10px #9D72FF,
-    0 -7px 10px #9D72FF;
+    -7px 0 10px ${ colors.purple },  
+    7px 0 10px ${ colors.purple },
+    0 7px 10px ${ colors.purple },
+    0 -7px 10px ${ colors.purple };
 `
 
 const AboutMeSection = () => {

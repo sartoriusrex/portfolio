@@ -6,18 +6,17 @@ import { BioDescriptionText, Brackets } from '../styles/general';
 const UseContainer = styled.div`
   width: 90%;
   max-width: 25em;
-  padding-left: 2em;
+  padding-left: 1em;
 `
 
 const UseTextContainer = styled.div`
-  margin-left: 2rem;
+  margin-left: 1rem;
   margin-bottom: .1rem;
   display: flex;
-
 `
 
 const ListContainer = styled.div`
-  margin: 0 1em;
+  margin-right: 1em;
 `
 
 const ListHeader = styled.p`
@@ -42,9 +41,8 @@ const ListItem = styled.li`
 const Use = () => (
   <UseContainer>
     <BioDescriptionText>
-      I Use:
+      I Use: <Brackets>[</Brackets>
     </BioDescriptionText>
-    <Brackets>[</Brackets>
     <UseTextContainer>
       <ListContainer>
         <ListHeader>Backend:</ListHeader>
