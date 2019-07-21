@@ -2,7 +2,9 @@ import { colors } from './styles/variables';
 import jjdImage from './images/jjd.png';
 import jjdGif from './images/jjd.gif';
 import usdtImage from './images/usdt.png';
+import usdtGif from './images/usdt.gif';
 import ravenImage from './images/raven.png';
+import ravenGif from './images/raven.gif';
 import { ReactComponent as Email } from './images/email.svg';
 import { ReactComponent as Github } from './images/github.svg';
 import { ReactComponent as Skype } from './images/skype.svg';
@@ -38,7 +40,7 @@ const content = {
       title: "US Department of Truth",
       technologies: "Node, Express, EJS, MongoDB, PassportJS, scss, gulp, Heroku",
       description: "I wanted to make a satire website in the wake of the wave of fake news scandals. USDT is a fictitious government entity that controls the dissemination of public information.",
-      gif: "asdf",
+      gif: usdtGif,
       image: usdtImage,
       color: colors.pink,
       live: "https://usdt-satire.herokuapp.com/",
@@ -49,7 +51,7 @@ const content = {
       title: "Raven",
       technologies: "React, Hooks, ReactDOM, Heroku",
       description: "I Implemented a Sketch Design I found online using only React. The design was only done for layout widths of 1440px, so I made it responsive, using my own design decisions.",
-      gif: "asdf",
+      gif: ravenGif,
       image: ravenImage,
       color: colors.purple,
       live: "https://raven-landing-page.herokuapp.com/",

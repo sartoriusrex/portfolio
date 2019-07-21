@@ -31,6 +31,7 @@ const ProjectSection = () => {
   return(
     <ThirdSection>
       <SectionHeader>Projects</SectionHeader>
+
       {content.projects.map( subject =>
         <ProjectItem 
           key={ subject.short }
@@ -79,11 +80,10 @@ const ProjectSection = () => {
             { preview && preview === subject.short &&
               <ProjectPreview src={ subject.gif } />
             }
-            
-
           </ProjectItemTextContainer>
         </ProjectItem>
       )}
+      
     </ThirdSection>
   )
 }
