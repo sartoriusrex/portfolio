@@ -82,6 +82,8 @@ export const ProjectLinkContainer = styled.div`
 
 export const ProjectLink = styled.a.attrs( props => ({
   href: props.link,
+  rel: "noopener noreferrer",
+  target: "_blank"
 }))`
   color: ${ props => props.color };
   font-size: .8em,
