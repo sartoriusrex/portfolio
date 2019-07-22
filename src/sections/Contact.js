@@ -74,7 +74,7 @@ const ContactTextContainer = styled.div`
 `
 
 const ContactLabel = styled.p`
-  color: ${ colors.yellow };
+  color: ${ colors.gray };
   font-size: .7em;
   margin-bottom: .9em;
 `
