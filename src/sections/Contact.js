@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import PDF from '../mai_resume.pdf';
 import { colors } from '../styles/variables';
 import content from '../content';
 import { ReactComponent as Email } from '../images/email.svg';
@@ -16,6 +17,14 @@ const FourthSection = styled.section`
   justify-content: center;
   width: 100%;
   min-height: 100vh;
+`
+
+const ViewPDF = styled.a.attrs( props => ({
+  href: props.pdf,
+  target: "_blank"
+}))`
+  color: ${ colors.gray };
+  margin-bottom: 2em;
 `
 
 const ContactContainer = styled.div`
@@ -48,7 +57,6 @@ const style = {
 }
 
 const renderIcon = label => {
-  console.log( label );
   switch( label ){
     case "Email":
       return <Email style={ style.icon }/>;
@@ -92,6 +100,7 @@ const ContactText = styled.a.attrs( props => ({
 
 const ContactSection = () => (
   <FourthSection>
+    <ViewPDF pdf={ PDF }>View Resume</ViewPDF>
     <ContactContainer>
       { content.contact.map( contact => 
         <ContactItem key={ contact.label }>
