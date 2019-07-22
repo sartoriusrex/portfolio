@@ -19,26 +19,26 @@ export const Brackets = styled.span`
 export const ProjectItem = styled.div`
   margin-bottom: 3em;
   width: 90%;
-  max-width: 50em;
+  max-width: 40em;
   border-radius: .5em;
   box-shadow: 
-    inset 0 0 3px #FFF,
-    0 0 3px #fff,           
+    inset 0 0 2px #FFF,
+    0 0 2px #fff,           
     
-    inset 3px 0 3px ${ props => props.color },  
-    inset -3px 0 3px ${ props => props.color }, 
-    inset 0 3px 3px ${ props => props.color },
-    inset 0 -3px 3px ${ props => props.color },
+    inset 2px 0 2px ${ props => props.color },  
+    inset -2px 0 2px ${ props => props.color }, 
+    inset 0 2px 2px ${ props => props.color },
+    inset 0 -2px 2px ${ props => props.color },
     
-    inset 3px 0 5px ${ props => props.color },  
-    inset -3px 0 5px ${ props => props.color }, 
-    inset 0 3px 5px ${ props => props.color }, 
-    inset 0 -3px 5px ${ props => props.color }, 
+    inset 2px 0 4px ${ props => props.color },  
+    inset -2px 0 4px ${ props => props.color }, 
+    inset 0 2px 4px ${ props => props.color }, 
+    inset 0 -2px 4px ${ props => props.color }, 
     
-    -5px 0 8px ${ props => props.color },  
-    5px 0 8px ${ props => props.color },
-    0 5px 8px ${ props => props.color },
-    0 -5px 8px ${ props => props.color };
+    -4px 0 7px ${ props => props.color },  
+    4px 0 7px ${ props => props.color },
+    0 4px 7px ${ props => props.color },
+    0 -4px 7px ${ props => props.color };
 `
 
 export const ProjectItemTextContainer = styled.div`
@@ -46,7 +46,7 @@ export const ProjectItemTextContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 2em;
+  padding: 5%;
 `
 
 export const ProjectItemTitle = styled.h3`

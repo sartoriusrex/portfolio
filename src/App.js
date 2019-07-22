@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 import LandingSection from './sections/Landing';
 import AboutMeSection from './sections/AboutMe';
 import ProjectSection from './sections/Projects';
+import ContactSection from './sections/Contact';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=swap');
@@ -54,6 +55,7 @@ const App = () => (
       <LandingSection />
       <AboutMeSection />
       <ProjectSection />
+      <ContactSection />
       <Nav />
     </AppWrapper>
   </>

@@ -4,5 +4,6 @@ export const colors = {
   blue: "#01FFFF",
   purple: "#9D72FF",
   pink: "#FFB3FD",
+  gray: "#707070",
   blackOverlay: "rgba( 0, 0, 0, .8)"
 }

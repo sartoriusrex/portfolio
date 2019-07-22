@@ -5,11 +5,6 @@ import usdtImage from './images/usdt.png';
 import usdtGif from './images/usdt.gif';
 import ravenImage from './images/raven.png';
 import ravenGif from './images/raven.gif';
-import { ReactComponent as Email } from './images/email.svg';
-import { ReactComponent as Github } from './images/github.svg';
-import { ReactComponent as Skype } from './images/skype.svg';
-import { ReactComponent as Stackoverflow } from './images/stackoverflow.svg';
-import { ReactComponent as Linkedin } from './images/linkedin.svg';
 
 const content = {
   landing: {
@@ -61,32 +56,27 @@ const content = {
   contact: [
     {
       text: "dmai.developer@gmail.com",
-      icon: Email,
-      label: "e-mail",
+      label: "Email",
       link: "mailto:dmai.developer@gmail.com"
     },
     {
       text: "sartoriusrex",
-      icon: Github,
       label: "Github",
       link: "https://github.com/sartoriusrex"
     },
     {
       text: "dmaidev",
-      icon: Linkedin,
-      label: "LinkedIn",
-      link: "www.linkedin.com/in/dmaidev"
+      label: "Linkedin",
+      link: "https://www.linkedin.com/in/dmaidev/"
     },
     {
       text: "dennis_mai",
-      icon: Skype,
       label: "Skype",
       link: "skype:dennis_mai?chat"
     },
     {
       text: "sartoriusrex",
-      icon: Stackoverflow,
-      label: "e-mail",
+      label: "Stackoverflow",
       link: "https://stackoverflow.com/users/11639750/sartoriusrex"
     },
   ]
