@@ -25,17 +25,33 @@ const MoreAboutMeContainer = styled.div`
 const MoreAboutMeText = styled.p`
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 2.5%;
+  width: 95%;
   font-size: .9em;
   color: white;
   text-align: justify;
   z-index: 10;
   background-color: black;
-  padding: 1em .5em;
+  padding: 1em;
   line-height: 1.5;
-  border-top: 1px solid ${ colors.turquoise };
-  border-bottom: 1px solid ${ colors.turquoise };
+  box-shadow: 
+    inset 0 0 2px #FFF,
+    0 0 2px #fff,           
+    
+    inset 2px 0 2px ${ colors.turquoise },  
+    inset -2px 0 2px ${ colors.turquoise }, 
+    inset 0 2px 2px ${ colors.turquoise },
+    inset 0 -2px 2px ${ colors.turquoise },
+    
+    inset 2px 0 4px ${ colors.turquoise },  
+    inset -2px 0 4px ${ colors.turquoise }, 
+    inset 0 2px 4px ${ colors.turquoise }, 
+    inset 0 -2px 4px ${ colors.turquoise }, 
+    
+    -4px 0 7px ${ colors.turquoise },  
+    4px 0 7px ${ colors.turquoise },
+    0 4px 7px ${ colors.turquoise },
+    0 -4px 7px ${ colors.turquoise };
 `
 
 const MoreAboutMe = ({ visible }) => (

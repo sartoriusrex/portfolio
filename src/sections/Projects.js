@@ -24,7 +24,7 @@ const ProjectSection = () => {
 
   return(
     <ThirdSection id="projects">
-      {content.projects.map( subject =>
+      { content.projects.map( subject =>
         <ProjectItem 
           key={ subject.short }
           color={ subject.color  }

@@ -9,7 +9,7 @@ const Navbar = styled.nav`
   display: flex;
   background-color: transparent;
   width: 95%;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   display: flex;
   justify-content: space-between;
@@ -17,7 +17,7 @@ const Navbar = styled.nav`
 
   @media screen and (min-width: 900px) {
     width: auto;
-    height: 100%;
+    height: 30%;
     left: 5%;
     flex-direction: column;
     align-self: start;

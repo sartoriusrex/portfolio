@@ -111,7 +111,7 @@ const LandingSection = ({ selected, setSelected }) => {
         to="landing"
         smooth={ true }
         duration={ 50 }
-        offset={ -100 }
+        offset={ -150 }
         onSetActive={ () => setSelected( null ) }
         spy={ true }
       >

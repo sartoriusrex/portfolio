@@ -10,7 +10,7 @@ const Footer = styled.footer`
   color: ${ colors.gray }
   font-size: .7em;
   opacity: .5;
-  margin: 0 3em;
+  margin: 0 3em 7em;
 `
 
 const FooterItem = styled.p`
