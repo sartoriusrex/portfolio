@@ -6,7 +6,7 @@ import { BioDescriptionText, Brackets } from '../styles/general';
 const LoveContainer = styled.div`
   width: 90%;
   max-width: 25em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   padding-left: 1em;
 `
 
@@ -19,7 +19,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   list-style: none;
   color: white;
-  font-size: .8em;
+  font-size: .9em;
   margin-bottom: .5rem;
 `
 

@@ -13,13 +13,13 @@ export const Brackets = styled.span`
   color: ${ colors.blue };
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: .3em;
+  margin-bottom: .5em;
 `
 
 export const ProjectItem = styled.div`
   margin-bottom: 3em;
   width: 90%;
-  max-width: 40em;
+  max-width: 35em;
   border-radius: .5em;
   box-shadow: 
     inset 0 0 2px #FFF,
@@ -59,16 +59,18 @@ export const ProjectItemTitle = styled.h3`
 
 export const ProjectItemTechs = styled.p`
   color: ${ props => props.color };
-  font-size: .8em;
+  font-size: .9em;
   font-style: italic;
   margin-bottom: 1rem;
   text-align: center;
+  line-height: 1.3;
 `
 
 export const ProjectItemDesc = styled.p`
   color: ${ props => props.color };
-  font-size: .8em;
+  font-size: .9em;
   margin-bottom: 1rem;
+  line-height: 1.5;
 `
 
 export const ProjectLinkContainer = styled.div`
@@ -85,9 +87,10 @@ export const ProjectLink = styled.a.attrs( props => ({
   target: "_blank"
 }))`
   color: ${ props => props.color };
-  font-size: .8em,
+  font-size: .9em,
   font-weight: bold;
   text-decoration: none;
+  margin: 0 .2em;
   &:hover {
     text-decoration: underline;
   }

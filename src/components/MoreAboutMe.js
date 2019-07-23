@@ -27,12 +27,13 @@ const MoreAboutMeText = styled.p`
   top: 0;
   left: 0;
   width: 100%;
-  font-size: .8em;
+  font-size: .9em;
   color: white;
   text-align: justify;
   z-index: 10;
-  background-color: rgba( 0, 0, 0, .85 );
+  background-color: black;
   padding: 1em .5em;
+  line-height: 1.5;
   border-top: 1px solid ${ colors.turquoise };
   border-bottom: 1px solid ${ colors.turquoise };
 `

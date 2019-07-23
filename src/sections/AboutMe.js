@@ -19,7 +19,7 @@ const SecondSection = styled.section`
 
 const HorizontalRule = styled.hr`
   width: 100%;
-  max-width: 30em;
+
   overflow: hidden;
   border: none;
   margin: 1em 0;
@@ -55,7 +55,7 @@ const AboutMeSection = () => {
   }
 
   return(
-    <SecondSection>
+    <SecondSection id="about">
       <BioContainer />
       <ReadMoreButton 
         toggleVisible={ toggleVisible } 

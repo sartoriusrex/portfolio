@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import content from '../content';
-import { colors } from '../styles/variables';
 import { ProjectItem, ProjectItemTextContainer, ProjectItemTitle, ProjectItemTechs, ProjectItemDesc, ProjectLinkContainer, ProjectLink, ProjectPreview } from '../styles/general';
 
 const ThirdSection = styled.section`
@@ -11,6 +10,7 @@ const ThirdSection = styled.section`
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  padding-top: 6em;
 `
 
 const ProjectSection = () => {
@@ -22,16 +22,8 @@ const ProjectSection = () => {
     setPreview( subject );
   }
 
-  const SectionHeader = styled.h2`
-    color: ${ colors.purple };
-    font-size: 1.6em;
-    margin: 2em auto;
-  `
-
   return(
-    <ThirdSection>
-      <SectionHeader>Projects</SectionHeader>
-
+    <ThirdSection id="projects">
       {content.projects.map( subject =>
         <ProjectItem 
           key={ subject.short }
@@ -83,7 +75,7 @@ const ProjectSection = () => {
           </ProjectItemTextContainer>
         </ProjectItem>
       )}
-      
+
     </ThirdSection>
   )
 }

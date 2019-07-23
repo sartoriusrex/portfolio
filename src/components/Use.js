@@ -21,9 +21,9 @@ const ListContainer = styled.div`
 
 const ListHeader = styled.p`
   color: white;
-  font-size: .9em;
+  font-size: 1em;
   font-weight: bold;
-  margin-bottom: .3em;
+  margin-bottom: .4em;
 `
 
 const List = styled.ul`
@@ -34,8 +34,8 @@ const List = styled.ul`
 const ListItem = styled.li`
   list-style: none;
   color: white;
-  font-size: .8em;
-  margin-bottom: .3em;
+  font-size: .9em;
+  margin-bottom: .4em;
 `
 
 const Use = () => (

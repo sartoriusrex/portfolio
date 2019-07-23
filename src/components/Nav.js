@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
+import { Link } from "react-scroll";
 
 import { colors } from '../styles/variables';
 import { FlickerButton } from '../styles/animations';
@@ -7,12 +8,22 @@ import { FlickerButton } from '../styles/animations';
 const Navbar = styled.nav`
   display: flex;
   background-color: transparent;
-  width: 100%;
+  width: 95%;
   position: sticky;
   bottom: 0;
   display: flex;
   justify-content: space-between;
   max-width: 25rem;
+
+  @media screen and (min-width: 900px) {
+    width: auto;
+    height: 100%;
+    left: 0;
+    flex-direction: column;
+    align-self: start;
+    bottom: 40%;
+    margin-left: 5%;
+  }
 `
 
 const Button = styled.button`
@@ -27,7 +38,7 @@ const Button = styled.button`
   border: .5px solid white;
   padding: 1em;
   background-color: black;
-  font-size: .8em;
+  font-size: .9em;
   box-shadow: 
     inset 0 0 1px #FFF,
     0 0 1px #fff,
@@ -87,24 +98,50 @@ const Nav = () => {
 
   return(
     <Navbar>
-      <Button 
-        onClick={ () => setSelected('about') } 
-        selected={ selected === 'about' ? selected : null }
+      <Link
+        to="about"
+        smooth={ true }
+        duration={ 100 }
+        offset={ 40 }
+        onSetActive={ () => setSelected( 'about' ) }
+        spy={ true }
       >
-        About
-      </Button>
-      <Button 
-        onClick={ () => setSelected('projects') } 
-        selected={ selected === 'projects' ? selected : null } 
+        <Button 
+          onClick={ () => setSelected( 'about' ) } 
+          selected={ selected === 'about' ? selected : null }
+        >
+          About
+        </Button>
+      </Link>
+      <Link
+        to="projects"
+        smooth={ true }
+        duration={ 100 }
+        offset={ 40 }
+        onSetActive={ () => setSelected( 'projects' ) }
+        spy={ true }
       >
-        Projects
-      </Button>
-      <Button 
-        onClick={ () => setSelected('contact') } 
-        selected={ selected === 'contact' ? selected : null } 
+        <Button 
+          onClick={ () => setSelected( 'projects' ) } 
+          selected={ selected === 'projects' ? selected : null } 
+        >
+          Projects
+        </Button>
+      </Link>
+      <Link
+        to="contact"
+        smooth={ true }
+        duration={ 100 }
+        onSetActive={ () => setSelected( 'contact' ) }
+        spy={ true }
       >
-        Contact
-      </Button>
+        <Button 
+          onClick={ () => setSelected( 'contact' ) } 
+          selected={ selected === 'contact' ? selected : null } 
+        >
+          Contact
+        </Button>
+      </Link>
     </Navbar>
   );
 }

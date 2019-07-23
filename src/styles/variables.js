@@ -5,5 +5,5 @@ export const colors = {
   purple: "#9D72FF",
   pink: "#FFB3FD",
   gray: "#AFAFAF",
-  blackOverlay: "rgba( 0, 0, 0, .8)"
+  blackOverlay: "rgba( 0, 0, 0, .85)"
 }

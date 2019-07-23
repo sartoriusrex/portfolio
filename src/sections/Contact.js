@@ -83,8 +83,8 @@ const ContactTextContainer = styled.div`
 
 const ContactLabel = styled.p`
   color: ${ colors.gray };
-  font-size: .7em;
-  margin-bottom: .9em;
+  font-size: .8em;
+  margin-bottom: .5em;
 `
 
 const ContactText = styled.a.attrs( props => ({
@@ -99,7 +99,7 @@ const ContactText = styled.a.attrs( props => ({
 
 
 const ContactSection = () => (
-  <FourthSection>
+  <FourthSection id="contact">
     <ViewPDF pdf={ PDF }>View Resume</ViewPDF>
     <ContactContainer>
       { content.contact.map( contact => 

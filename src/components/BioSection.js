@@ -12,7 +12,7 @@ const BioSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 4em;
 `
 
 const BioPicContainer = styled.div`
@@ -79,8 +79,8 @@ const BioDescription = styled.p`
   text-align: right;
   color: white;
   max-width: 15em;
-  width: 80%;
-  font-size: .8em;
+  width: 100%;
+  font-size: .9em;
 `
 
 const BioPlace = styled.p`
