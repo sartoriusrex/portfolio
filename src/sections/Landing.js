@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-scroll";
 
 import { TurnOnBorder, TurnOnName, FlickerLetter } from '../styles/animations';
 import { colors } from '../styles/variables';
@@ -93,9 +94,9 @@ const SubtitleParagraph = styled.p`
   color: white;
 `
 
-const LandingSection = () => {
+const LandingSection = ({ selected, setSelected }) => {
   return(
-    <FirstSection>
+    <FirstSection id="landing">
       <TitleContainer>
         <Intro>{ content.landing.intro }</Intro>
         <Name>
@@ -106,11 +107,20 @@ const LandingSection = () => {
           ai
         </Name>
       </TitleContainer>
-      <SubtitleContainer>
-        <SubtitleParagraph>
-          { content.landing.subtitle }
-        </SubtitleParagraph>
-      </SubtitleContainer>
+      <Link
+        to="landing"
+        smooth={ true }
+        duration={ 50 }
+        offset={ -100 }
+        onSetActive={ () => setSelected( null ) }
+        spy={ true }
+      >
+        <SubtitleContainer >
+          <SubtitleParagraph>
+            { content.landing.subtitle }
+          </SubtitleParagraph>
+        </SubtitleContainer>
+      </Link>
     </FirstSection>
   )
 }

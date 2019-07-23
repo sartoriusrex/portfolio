@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from "react-scroll";
 
@@ -18,11 +18,10 @@ const Navbar = styled.nav`
   @media screen and (min-width: 900px) {
     width: auto;
     height: 100%;
-    left: 0;
+    left: 5%;
     flex-direction: column;
     align-self: start;
     bottom: 40%;
-    margin-left: 5%;
   }
 `
 
@@ -93,57 +92,53 @@ const Button = styled.button`
   `}
 `
 
-const Nav = () => {
-  const [ selected, setSelected ] = useState( null );
-
-  return(
-    <Navbar>
-      <Link
-        to="about"
-        smooth={ true }
-        duration={ 100 }
-        offset={ 40 }
-        onSetActive={ () => setSelected( 'about' ) }
-        spy={ true }
+const Nav = ({ selected, setSelected }) => (
+  <Navbar>
+    <Link
+      to="about"
+      smooth={ true }
+      duration={ 100 }
+      offset={ 40 }
+      onSetActive={ () => setSelected( 'about' ) }
+      spy={ true }
+    >
+      <Button 
+        onClick={ () => setSelected( 'about' ) } 
+        selected={ selected === 'about' ? selected : null }
       >
-        <Button 
-          onClick={ () => setSelected( 'about' ) } 
-          selected={ selected === 'about' ? selected : null }
-        >
-          About
-        </Button>
-      </Link>
-      <Link
-        to="projects"
-        smooth={ true }
-        duration={ 100 }
-        offset={ 40 }
-        onSetActive={ () => setSelected( 'projects' ) }
-        spy={ true }
+        About
+      </Button>
+    </Link>
+    <Link
+      to="projects"
+      smooth={ true }
+      duration={ 100 }
+      offset={ 40 }
+      onSetActive={ () => setSelected( 'projects' ) }
+      spy={ true }
+    >
+      <Button 
+        onClick={ () => setSelected( 'projects' ) } 
+        selected={ selected === 'projects' ? selected : null } 
       >
-        <Button 
-          onClick={ () => setSelected( 'projects' ) } 
-          selected={ selected === 'projects' ? selected : null } 
-        >
-          Projects
-        </Button>
-      </Link>
-      <Link
-        to="contact"
-        smooth={ true }
-        duration={ 100 }
-        onSetActive={ () => setSelected( 'contact' ) }
-        spy={ true }
+        Projects
+      </Button>
+    </Link>
+    <Link
+      to="contact"
+      smooth={ true }
+      duration={ 100 }
+      onSetActive={ () => setSelected( 'contact' ) }
+      spy={ true }
+    >
+      <Button 
+        onClick={ () => setSelected( 'contact' ) } 
+        selected={ selected === 'contact' ? selected : null } 
       >
-        <Button 
-          onClick={ () => setSelected( 'contact' ) } 
-          selected={ selected === 'contact' ? selected : null } 
-        >
-          Contact
-        </Button>
-      </Link>
-    </Navbar>
-  );
-}
+        Contact
+      </Button>
+    </Link>
+  </Navbar>
+)
 
 export default Nav;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Normalize } from 'styled-normalize';
 import styled, { createGlobalStyle } from 'styled-components';
 
@@ -64,19 +64,29 @@ const AppWrapper = styled.main`
   }
 `
 
-const App = () => (
-  <>
-    <Normalize />
-    <GlobalStyle />
-    <AppWrapper>
-      <LandingSection />
-      <AboutMeSection />
-      <ProjectSection />
-      <ContactSection />
-      <FooterSection />
-      <Nav />
-    </AppWrapper>
-  </>
-);
+const App = () => {
+  const [ selected, setSelected ] = useState( null );
+
+  return(
+    <>
+      <Normalize />
+      <GlobalStyle />
+      <AppWrapper>
+        <LandingSection 
+          selected={ selected } 
+          setSelected={ setSelected }
+        />
+        <AboutMeSection />
+        <ProjectSection />
+        <ContactSection />
+        <FooterSection />
+        <Nav 
+          selected={ selected } 
+          setSelected={ setSelected } 
+        />
+      </AppWrapper>
+    </>
+  )
+}
 
 export default App;

@@ -46,7 +46,7 @@ const HorizontalRule = styled.hr`
 `
 
 const AboutMeSection = () => {
-  const [ visible, setVisible ] = useState( false );
+  const [ visible, setVisible ] = useState( true );
 
   const toggleVisible = () => {
     visible === false ?

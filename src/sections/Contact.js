@@ -45,6 +45,11 @@ const ContactItem = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  transition: transform 100ms ease-in-out;
+
+  &:hover {
+    transform: translateX( .5em );
+  }
 `
 
 const style = {
@@ -73,12 +78,17 @@ const renderIcon = label => {
   }
 }
 
-const ContactTextContainer = styled.div`
+const ContactTextContainer = styled.a.attrs( props => ({
+  href: props.link,
+  rel: "noopener noreferrer",
+  target: "_blank"
+}))`
   min-width: 75%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-decoration: none;
 `
 
 const ContactLabel = styled.p`
@@ -87,14 +97,9 @@ const ContactLabel = styled.p`
   margin-bottom: .5em;
 `
 
-const ContactText = styled.a.attrs( props => ({
-  href: props.link,
-  rel: "noopener noreferrer",
-  target: "_blank"
-}))`
+const ContactText = styled.p`
   color: ${ colors.yellow };
   font-size: .9em;
-  text-decoration: none;
 `
 
 
@@ -105,9 +110,9 @@ const ContactSection = () => (
       { content.contact.map( contact => 
         <ContactItem key={ contact.label }>
           { renderIcon( contact.label ) }
-          <ContactTextContainer>
+          <ContactTextContainer link={ contact.link }>
             <ContactLabel>{ contact.label }</ContactLabel>
-            <ContactText link={ contact.link }>{ contact.text }</ContactText>
+            <ContactText >{ contact.text }</ContactText>
           </ContactTextContainer>
         </ContactItem>  
       )}

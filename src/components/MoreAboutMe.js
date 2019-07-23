@@ -7,7 +7,7 @@ import content from '../content';
 
 const MoreAboutMeContainer = styled.div`
   width: 100%;
-  max-width: 25em;
+  max-width: 30em;
   margin: .5em 0;
   position: relative;
   z-index: 10;

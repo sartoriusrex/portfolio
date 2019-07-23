@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { colors } from '../styles/variables';
 
@@ -8,20 +8,25 @@ const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   color: ${ colors.gray }
-  font-size: .5em;
+  font-size: .7em;
   opacity: .5;
   margin: 0 3em;
 `
 
 const FooterItem = styled.p`
   width: 100%;
-  margin: 1em;
+  margin: 1rem;
+
+  ${ props => props.copyright && css`
+    font-size: 2em;
+    opacity: 1;
+  `}
 `
 
 const FooterSection = () => (
   <Footer>
     <FooterItem>Photo by Olssenh Tichoc, K8, and Geoffroy Hauwen on Unsplash</FooterItem>
-    <FooterItem>Copyright Dennis Mai 2019 ©</FooterItem>
+    <FooterItem copyright>Copyright Dennis Mai 2019 ©</FooterItem>
   </Footer>
 )
 
