@@ -20,6 +20,10 @@ const MoreAboutMeContainer = styled.div`
     transform: translateY( 0em );
     opacity: 1;
   `}
+
+  @media screen and (min-width: 1200px) {
+    position: static;
+  }
 `
 
 const MoreAboutMeText = styled.p`
@@ -52,6 +56,10 @@ const MoreAboutMeText = styled.p`
     4px 0 7px ${ colors.turquoise },
     0 4px 7px ${ colors.turquoise },
     0 -4px 7px ${ colors.turquoise };
+
+  @media screen and (min-width: 1200px) {
+    position: static;
+  }
 `
 
 const MoreAboutMe = ({ visible }) => (
