@@ -13,6 +13,11 @@ const BioSection = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 4em;
+
+  @media screen and (min-width: 1200px) {
+    grid-area: mainBio;
+    place-self: start;
+  }
 `
 
 const BioPicContainer = styled.div`

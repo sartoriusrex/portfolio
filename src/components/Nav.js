@@ -21,7 +21,7 @@ const Navbar = styled.nav`
     left: 5%;
     flex-direction: column;
     align-self: start;
-    bottom: 40%;
+    bottom: 38%;
   }
 `
 
@@ -88,7 +88,7 @@ const Button = styled.button`
       0 -3px 6px ${ colors.blue };
 
     animation:
-      10s 1s 2 ${ FlickerButton };
+      10s 1s ${ FlickerButton };
   `}
 `
 

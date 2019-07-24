@@ -23,6 +23,8 @@ const MoreAboutMeContainer = styled.div`
 
   @media screen and (min-width: 1200px) {
     position: static;
+    grid-area: more;
+    place-self: start;
   }
 `
 

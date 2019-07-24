@@ -16,6 +16,7 @@ const Footer = styled.footer`
 const FooterItem = styled.p`
   width: 100%;
   margin: 1rem;
+  text-align: center;
 
   ${ props => props.copyright && css`
     font-size: 2em;
@@ -25,7 +26,7 @@ const FooterItem = styled.p`
 
 const FooterSection = () => (
   <Footer>
-    <FooterItem>Photo by Olssenh Tichoc, K8, and Geoffroy Hauwen on Unsplash</FooterItem>
+    <FooterItem>Photos by Olssenh Tichoc, K8, and Geoffroy Hauwen on Unsplash</FooterItem>
     <FooterItem copyright>Copyright Dennis Mai 2019 ©</FooterItem>
   </Footer>
 )

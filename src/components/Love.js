@@ -8,6 +8,12 @@ const LoveContainer = styled.div`
   max-width: 25em;
   margin-bottom: 1.5em;
   padding-left: 1em;
+
+  @media screen and (min-width: 1200px) {
+    grid-area: love;
+    place-self: center start;
+    margin-top: 2em;
+  }
 `
 
 const List = styled.ul`

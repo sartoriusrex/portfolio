@@ -7,6 +7,11 @@ const UseContainer = styled.div`
   width: 90%;
   max-width: 25em;
   padding-left: 1em;
+
+  @media screen and (min-width: 1200px) {
+    grid-area: use;
+    margin-bottom: 2em;
+  }
 `
 
 const UseTextContainer = styled.div`
@@ -64,6 +69,7 @@ const Use = () => (
           <ListItem>bootstrap</ListItem>
           <ListItem>semanticUI</ListItem>
           <ListItem>React + ES6</ListItem>
+          <ListItem>Redux + Redux-Form</ListItem>
           <ListItem>styled-components</ListItem>
           <ListItem>jQuery</ListItem>
           <ListItem>Node</ListItem>

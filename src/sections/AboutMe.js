@@ -6,7 +6,8 @@ import BioContainer from '../components/BioSection';
 import ReadMoreButton from '../components/ReadMoreButton';
 import MoreAboutMe from '../components/MoreAboutMe';
 import Love from '../components/Love';
-import Use from '../components/Use';
+import Use from '../components/Use'; 
+
 
 
 const SecondSection = styled.section`
@@ -15,7 +16,29 @@ const SecondSection = styled.section`
   align-items: center;
   width: 100%;
   min-height: 100vh;
+
+  @media screen and (min-width: 1200px){
+    display: grid;
+    grid-template-columns: [ one ] 15% [ two ] auto [ three ] auto [ four ] auto [ five ] auto;
+    grid-template-rows: [ row-1 ] auto [ row-2 ] auto [ row-3 ] auto [ row-4 ] auto [ row-5 ] auto;
+    grid-gap: 1rem;
+    grid-template-areas:
+     ". mainBio mainBio hr5deg hr5deg"
+     ". . use hr5deg hr5deg"
+     ". . use love ."
+     "hr-5deg hr-5deg hr-5deg more more"
+     "hr-5deg hr-5deg hr-5deg more more";
+     justify-items: center;
+     align-items: center;
+    margin-bottom: 4em;
+  }
 `
+// mainBio more love use hr5deg hr-5deg
+//.  mB mB hr hr
+//nv .  lo hr hr
+//nv .  lo ma ma
+//nv hr hr us .
+//.  hr hr us .
 
 const HorizontalRule = styled.hr`
   width: 100%;
@@ -43,6 +66,12 @@ const HorizontalRule = styled.hr`
     4px 0 7px ${ colors.purple },
     0 4px 7px ${ colors.purple },
     0 -4px 7px ${ colors.purple };
+
+  @media screen and (min-width: 1200px) {
+    grid-area: hr${ props => props.deg };
+    transform: rotate( 35deg );
+    max-width: 35em;
+  }
 `
 
 const AboutMeSection = () => {
@@ -88,9 +117,11 @@ const AboutMeSection = () => {
     }
   }, [ width ] )
 
-  // compare window size and set visible to true of greater than 1199px, only on mount and unmount;
+  // compare window size and set visible to true of greater than 1199px and width to small, only on mount and unmount;
   useEffect( () => {
-    window.innerWidth > 1199 && setWidth( "small" ) && setVisible( true );
+    window.innerWidth > 1199 ?
+    setVisible( true ) && setWidth( "big" ) :
+    setWidth( "small" );
   },[])
 
   const toggleVisible = () => {
