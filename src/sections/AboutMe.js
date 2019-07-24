@@ -33,12 +33,6 @@ const SecondSection = styled.section`
     margin-bottom: 4em;
   }
 `
-// mainBio more love use hr5deg hr-5deg
-//.  mB mB hr hr
-//nv .  lo hr hr
-//nv .  lo ma ma
-//nv hr hr us .
-//.  hr hr us .
 
 const HorizontalRule = styled.hr`
   width: 100%;

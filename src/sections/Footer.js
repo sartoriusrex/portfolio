@@ -7,6 +7,7 @@ const Footer = styled.footer`
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: ${ colors.gray }
   font-size: .7em;
   opacity: .5;
@@ -14,8 +15,7 @@ const Footer = styled.footer`
 `
 
 const FooterItem = styled.p`
-  width: 100%;
-  margin: 1rem;
+  margin: 1rem 0;
   text-align: center;
 
   ${ props => props.copyright && css`
@@ -27,7 +27,7 @@ const FooterItem = styled.p`
 const FooterSection = () => (
   <Footer>
     <FooterItem>Photos by Olssenh Tichoc, K8, and Geoffroy Hauwen on Unsplash</FooterItem>
-    <FooterItem copyright>Copyright Dennis Mai 2019 ©</FooterItem>
+    <FooterItem copyright >Copyright Dennis Mai 2019 ©</FooterItem>
   </Footer>
 )
 

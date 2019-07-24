@@ -12,7 +12,7 @@ const Button = styled.button`
   background-color: transparent;
   border: none;
   color: #808080;
-  font-size: .7em;
+  font-size: .8em;
   z-index: 100;
 
   &:active,

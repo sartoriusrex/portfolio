@@ -58,7 +58,7 @@ const Use = () => (
           <ListItem>Mysql</ListItem>
           <ListItem>Git & Github</ListItem>
           <ListItem>Heroku</ListItem>
-          <ListItem>Gatsby.js</ListItem>
+          <ListItem>Netlify</ListItem>
         </List>
       </ListContainer>
       <ListContainer>

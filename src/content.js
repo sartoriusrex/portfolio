@@ -21,7 +21,7 @@ const content = {
     { 
       short: "jjd",
       title: "Jiu Jitsu Distilled",
-      technologies: "React, Redux, React-Router, React-Form, MongoDB, Node, Express, Axios, Bootstrap, Mailgun, JWT, bcryptjs, Heroku",
+      technologies: "React, Redux, React-Router, React-Form, MongoDB, Node, Express, Axios, Bootstrap, Mailgun, JWT, bcryptjs, Heroku, AdobeXD",
       description: "Full stack Brazilian Jiu Jitsu technique and sequence organizer.",
       gif: jjdGif,
       image: jjdImage,
@@ -44,7 +44,7 @@ const content = {
     {
       short: "raven",
       title: "Raven",
-      technologies: "React, Hooks, ReactDOM, Heroku",
+      technologies: "React, Hooks, Sketch, Zeplin, Heroku",
       description: "Fully responsive React implementation of Sketch Design, which was only spec'ed for layouts 1440px wide.",
       gif: ravenGif,
       image: ravenImage,
