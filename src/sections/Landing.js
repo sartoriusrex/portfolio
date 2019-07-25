@@ -13,6 +13,7 @@ const FirstSection = styled.section`
   align-items: center;
   width: 100%;
   height: 100vh;
+  margin-bottom: 2em;
 `
 
 const TitleContainer = styled.div`

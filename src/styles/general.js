@@ -107,9 +107,14 @@ export const ProjectPreview = styled.img.attrs( props => ({
   transform: scale( 0 );
   transition: opacity 150ms ease-in, transform 150ms ease-in;
   will-change: opacity, transform;
+  display: none;
 
   ${ props => props.src && css`
     opacity: 1;
     transform: scale( 1 );
+  `}
+
+  ${ props => props.visible && css`
+    display: inline-block;
   `}
 `
