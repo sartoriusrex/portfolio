@@ -9,11 +9,11 @@ import ravenGif from './images/raven.gif';
 const content = {
   landing: {
     intro: "Hey, I'm",
-    subtitle: "I build Internet stuff and solve problems"
+    subtitle: "I build fast, responsive websites"
   },
   bio: {
     title: "Dennis Mai",
-    description: "Self-taught Web Developer, Avid Learner, and Jiu Jitero living in",
+    description: "Self-taught Web Developer, Avid Learner, and Jiu Jiteiro living in",
     place: "{ Hawaii: Kauai }"
   },
   about: "Born and raised in Wichita, Kansas to immigrant, Vietnamese parents. Studied abroad in Murcia, Spain where I met my bombastic Swiss-French wife. Moved to Zurich, Switzerland, tasted the start-up life, ate lots of cheese and chocolate. Fell in love with Brazilian Jiu Jitsu. Witnessed the birth of my fiery daughter. Moved to Hawaii, where we live and play today. Life is Good.",

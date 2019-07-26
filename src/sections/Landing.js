@@ -90,7 +90,8 @@ const SubtitleContainer = styled.div`
 `
 
 const SubtitleParagraph = styled.p`
-  font-size: 1.4em;
+  font-size: 1.3em;
+  line-height: 1.3;
   text-align: left;
   color: white;
 `
