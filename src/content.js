@@ -16,12 +16,12 @@ const content = {
     description: "Self-taught Web Developer, Avid Learner, and Jiu Jitero living in",
     place: "{ Hawaii: Kauai }"
   },
-  about: "Born and raised in raised in Wichita, Kansas to immigrant, Vietnamese parents. Studied abroad in Murcia, Spain where I met my Swiss wife. Moved to Zurich, Switzerland and tasted the start-up life. Fell in love with Brazilian Jiu Jitsu. Witnessed the birth of my daughter. Moved to Hawaii, where we all live & play today. Life is Good.",
+  about: "Born and raised in Wichita, Kansas to immigrant, Vietnamese parents. Studied abroad in Murcia, Spain where I met my bombastic Swiss-French wife. Moved to Zurich, Switzerland, tasted the start-up life, ate lots of cheese and chocolate. Fell in love with Brazilian Jiu Jitsu. Witnessed the birth of my fiery daughter. Moved to Hawaii, where we live and play today. Life is Good.",
   projects: [
     { 
       short: "jjd",
       title: "Jiu Jitsu Distilled",
-      technologies: "React, Redux, React-Router, React-Form, MongoDB, Node, Express, Axios, Bootstrap, Mailgun, JWT, bcryptjs, Heroku, AdobeXD",
+      technologies: "React, Redux, React-Router, React-Form, MongoDB, Mongoose, Node, Express, Axios, Bootstrap, Mailgun, JWT, bcryptjs, Heroku, AdobeXD",
       description: "Full stack Brazilian Jiu Jitsu technique and sequence organizer.",
       gif: jjdGif,
       image: jjdImage,

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import { TurnOnBorder, TurnOnName, FlickerLetter } from '../styles/animations';
 import { colors } from '../styles/variables';
@@ -112,7 +112,7 @@ const LandingSection = ({ selected, setSelected }) => {
         to="landing"
         smooth={ true }
         duration={ 50 }
-        offset={ -150 }
+        offset={ 0 }
         onSetActive={ () => setSelected( null ) }
         spy={ true }
       >

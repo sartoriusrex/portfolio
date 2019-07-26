@@ -46,7 +46,7 @@ const ListItem = styled.li`
 const Use = () => (
   <UseContainer>
     <BioDescriptionText>
-      I Use: <Brackets>[</Brackets>
+      I Use: <Brackets>{ `{` }</Brackets>
     </BioDescriptionText>
     <UseTextContainer>
       <ListContainer>
@@ -76,7 +76,7 @@ const Use = () => (
         </List>
       </ListContainer>
     </UseTextContainer>
-    <Brackets>];</Brackets>
+    <Brackets>{ `}` }</Brackets>
   </UseContainer>
 )
 
