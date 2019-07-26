@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 import { TurnOnBorder, TurnOnName, FlickerLetter } from '../styles/animations';
 import { colors } from '../styles/variables';
