@@ -64,11 +64,12 @@ const Use = () => (
       <ListContainer>
         <ListHeader>Frontend:</ListHeader>
         <List>
-          <ListItem>HTML5, ejs, JSX</ListItem>
-          <ListItem>CSS3, scss, gulp</ListItem>
+          <ListItem>HTML5, CSS3</ListItem>
+          <ListItem>Javascript, ejs</ListItem>
+          <ListItem>scss, BEM, gulp</ListItem>
           <ListItem>bootstrap</ListItem>
           <ListItem>semanticUI</ListItem>
-          <ListItem>React + ES6</ListItem>
+          <ListItem>React + JSX</ListItem>
           <ListItem>Redux + Redux-Form</ListItem>
           <ListItem>styled-components</ListItem>
           <ListItem>jQuery</ListItem>
