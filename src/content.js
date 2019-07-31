@@ -33,7 +33,7 @@ const content = {
     {
       short: "usdt",
       title: "US Department of Truth",
-      technologies: "Node, Express, EJS, MongoDB, PassportJS, scss, BEM, gulp, Heroku",
+      technologies: "Node, Express, EJS, MongoDB, Mongoose, PassportJS, scss, BEM, gulp, Heroku",
       description: "Full stack, no front-end framework, fake news and government satire website.",
       gif: usdtGif,
       image: usdtImage,

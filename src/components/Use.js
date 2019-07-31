@@ -6,7 +6,7 @@ import { BioDescriptionText, Brackets } from '../styles/general';
 const UseContainer = styled.div`
   width: 90%;
   max-width: 25em;
-  padding-left: 1em;
+  padding-left: .5em;
 
   @media screen and (min-width: 1200px) {
     grid-area: use;
@@ -15,13 +15,12 @@ const UseContainer = styled.div`
 `
 
 const UseTextContainer = styled.div`
-  margin-left: 1rem;
   margin-bottom: .1rem;
   display: flex;
 `
 
 const ListContainer = styled.div`
-  margin-right: 1em;
+  margin-left: .5em;
 `
 
 const ListHeader = styled.p`
@@ -54,8 +53,8 @@ const Use = () => (
         <List>
           <ListItem>ES5 & ES6</ListItem>
           <ListItem>Node</ListItem>
-          <ListItem>MongoDB</ListItem>
-          <ListItem>Mysql</ListItem>
+          <ListItem>Mongo + Mongoose</ListItem>
+          <ListItem>MySql</ListItem>
           <ListItem>Git & Github</ListItem>
           <ListItem>Heroku</ListItem>
           <ListItem>Netlify</ListItem>
@@ -66,12 +65,12 @@ const Use = () => (
         <List>
           <ListItem>HTML5, CSS3</ListItem>
           <ListItem>Javascript, ejs</ListItem>
-          <ListItem>scss, BEM, gulp</ListItem>
-          <ListItem>bootstrap</ListItem>
-          <ListItem>semanticUI</ListItem>
+          <ListItem>BEM + scss, gulp</ListItem>
+          <ListItem>Bootstrap</ListItem>
+          <ListItem>SemanticUI</ListItem>
           <ListItem>React + JSX</ListItem>
-          <ListItem>Redux + Redux-Form</ListItem>
-          <ListItem>styled-components</ListItem>
+          <ListItem>Redux, Redux-Form</ListItem>
+          <ListItem>Styled-components</ListItem>
           <ListItem>jQuery</ListItem>
           <ListItem>Node</ListItem>
         </List>

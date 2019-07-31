@@ -7,7 +7,7 @@ const LoveContainer = styled.div`
   width: 90%;
   max-width: 25em;
   margin-bottom: 1.5em;
-  padding-left: 1em;
+  padding-left: .5em;
 
   @media screen and (min-width: 1200px) {
     grid-area: love;
@@ -41,7 +41,7 @@ const Love = () => (
       <ListItem>“Brazilian Jiu Jitsu”,</ListItem>
       <ListItem>“The 80s”</ListItem>
     </List>
-    <Brackets>];</Brackets>
+    <Brackets>]</Brackets>
   </LoveContainer>
 )
 

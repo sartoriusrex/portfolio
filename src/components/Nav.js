@@ -11,6 +11,7 @@ const Navbar = styled.nav`
   width: 95%;
   position: fixed;
   bottom: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   max-width: 25rem;
@@ -27,7 +28,8 @@ const Navbar = styled.nav`
 
 const Button = styled.button`
   color: white;
-  margin: .2em auto 30px;
+  margin: .2em auto 20px;
+  padding: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +37,6 @@ const Button = styled.button`
   width: 7em;
   border-radius: .5em;
   border: .5px solid white;
-  padding: 1em;
   background-color: black;
   font-size: .9em;
   box-shadow: 
