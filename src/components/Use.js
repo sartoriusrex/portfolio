@@ -20,7 +20,7 @@ const UseTextContainer = styled.div`
 `
 
 const ListContainer = styled.div`
-  margin-left: .5em;
+  margin-left: .75em;
 `
 
 const ListHeader = styled.p`
@@ -31,7 +31,7 @@ const ListHeader = styled.p`
 `
 
 const List = styled.ul`
-  margin-left: 1rem;
+  margin-left: .75rem;
   list-style: none
 `
 
