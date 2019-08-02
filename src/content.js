@@ -1,10 +1,7 @@
 import { colors } from './styles/variables';
-import jjdImage from './images/jjd.png';
-import jjdGif from './images/jjd.gif';
-import usdtImage from './images/usdt.png';
-import usdtGif from './images/usdt.gif';
-import ravenImage from './images/raven.png';
-import ravenGif from './images/raven.gif';
+import jjdGif from './images/jjd-preview.gif';
+import usdtGif from './images/usdt-preview.gif';
+import ravenGif from './images/raven-preview.gif';
 
 const content = {
   landing: {
@@ -24,7 +21,6 @@ const content = {
       technologies: "React, Redux, React-Router, React-Form, MongoDB, Mongoose, Node, Express, Axios, Bootstrap, Mailgun, JWT, bcryptjs, Heroku, AdobeXD",
       description: "Full stack Brazilian Jiu Jitsu technique and sequence organizer.",
       gif: jjdGif,
-      image: jjdImage,
       color: colors.blue,
       live: "https://jjd-client-v1.herokuapp.com/",
       github: "https://github.com/sartoriusrex/jjd-client",
@@ -36,7 +32,6 @@ const content = {
       technologies: "Node, Express, EJS, MongoDB, Mongoose, PassportJS, scss, BEM, gulp, Heroku",
       description: "Full stack, no front-end framework, fake news and government satire website.",
       gif: usdtGif,
-      image: usdtImage,
       color: colors.pink,
       live: "https://usdt-satire.herokuapp.com/",
       github: "https://github.com/sartoriusrex/USDT",
@@ -47,7 +42,6 @@ const content = {
       technologies: "React, Hooks, Sketch, Zeplin, Heroku",
       description: "Fully responsive React implementation of Sketch Design, which was only spec'ed for layouts 1440px wide.",
       gif: ravenGif,
-      image: ravenImage,
       color: colors.purple,
       live: "https://raven-landing-page.herokuapp.com/",
       github: "https://github.com/sartoriusrex/raven-landing-page",
