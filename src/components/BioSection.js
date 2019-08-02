@@ -47,7 +47,10 @@ const BioPicContainer = styled.div`
     0 -7px 10px ${ colors.purple };
 `
 
-const BioPic = styled.img`
+const BioPic = styled.img.attrs({
+  alt: "Dennis Mai Bio Pic"
+}
+)`
   border-radius: 50%;
   width: 100%;
   height: 100%;
