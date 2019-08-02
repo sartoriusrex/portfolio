@@ -96,9 +96,8 @@ export const ProjectLink = styled.a.attrs( props => ({
   }
 `
 
-export const ProjectPreview = styled.img.attrs( props => ({
+export const ProjectPreview = styled.video.attrs( props => ({
   src: props.src,
-  alt: "preview gif"
 }))`
   width: 100%;
   height: auto;

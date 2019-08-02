@@ -69,9 +69,13 @@ const ProjectSection = () => {
                 </ProjectLink>
               }
             </ProjectLinkContainer>
-            <ProjectPreview 
-              src={ subject.gif } 
+            <ProjectPreview
+              src={ subject.gif }
+              alt={subject.short + ` preview`}
               visible={ preview && preview === subject.short }
+              loop
+              muted
+              autoPlay
             />
           </ProjectItemTextContainer>
         </ProjectItem>

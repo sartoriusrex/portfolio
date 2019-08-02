@@ -1,7 +1,7 @@
 import { colors } from './styles/variables';
-import jjdGif from './images/jjd-preview.gif';
-import usdtGif from './images/usdt-preview.gif';
-import ravenGif from './images/raven-preview.gif';
+import jjdGif from './images/jjd-preview.webm';
+import usdtGif from './images/usdt-preview.webm';
+import ravenGif from './images/raven-preview.webm';
 
 const content = {
   landing: {
