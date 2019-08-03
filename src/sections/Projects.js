@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import content from '../content';
 import { colors } from '../styles/variables';
-import { ProjectItem, ProjectItemTextContainer, ProjectItemTitle, ProjectItemTechs, ProjectItemDesc, ProjectLinkContainer, ProjectLink, ProjectPreview, ProjectVideoPreview } from '../styles/general';
+import { ProjectItem, ProjectItemTextContainer, ProjectItemTitle, ProjectItemTechs, ProjectItemDesc, ProjectLinkContainer, ProjectLink, ProjectPreview, /*ProjectVideoPreview*/ } from '../styles/general';
 
 const ThirdSection = styled.section`
   display: flex;
@@ -91,11 +91,11 @@ const ProjectSection = () => {
                 </ProjectLink>
               }
             </ProjectLinkContainer>
-            {/* <ProjectPreview
+            <ProjectPreview
               src={ subject.gif }
               visible={ preview && preview === subject.short }
-            /> */}
-            <ProjectVideoPreview 
+            />
+            {/* <ProjectVideoPreview 
               src={ subject.vid }
               alt={subject.short + ` preview`}
               autoPlay 
@@ -105,7 +105,7 @@ const ProjectSection = () => {
             >
               <source src={ subject.vid } type="video/webm"/>
               <source src={ subject.vidTwo } type="video/mp4"/>
-            </ProjectVideoPreview>
+            </ProjectVideoPreview> */}
           </ProjectItemTextContainer>
         </ProjectItem>
       )}
