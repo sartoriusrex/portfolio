@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import content from '../content';
+import { colors } from '../styles/variables';
 import { ProjectItem, ProjectItemTextContainer, ProjectItemTitle, ProjectItemTechs, ProjectItemDesc, ProjectLinkContainer, ProjectLink, ProjectPreview } from '../styles/general';
 
 const ThirdSection = styled.section`
@@ -11,6 +12,25 @@ const ThirdSection = styled.section`
   width: 100%;
   min-height: 100vh;
   padding-top: 6em;
+`
+
+const ProjectSectionTitle = styled.h2`
+  @import url('https://fonts.googleapis.com/css?family=Nixie+One&display=swap');
+
+  color: white;
+  font-family: "Nixie One", sans-serif;
+  font-size: 2em;
+  letter-spacing: .05em;
+  margin-bottom: 2em;
+  text-shadow:
+    0 0 10px #fff, 
+    0 0 20px ${ colors.purple }, 
+    0 0 30px ${ colors.purple }, 
+    0 0 40px ${ colors.purple }, 
+    0 0 70px ${ colors.purple }, 
+    0 0 80px ${ colors.purple }, 
+    0 0 100px ${ colors.purple }, 
+    0 0 150px ${ colors.purple };
 `
 
 const ProjectSection = () => {
@@ -24,6 +44,7 @@ const ProjectSection = () => {
 
   return(
     <ThirdSection id="projects">
+      <ProjectSectionTitle>Projects</ProjectSectionTitle>
       { content.projects.map( subject =>
         <ProjectItem 
           key={ subject.short }
@@ -71,11 +92,7 @@ const ProjectSection = () => {
             </ProjectLinkContainer>
             <ProjectPreview
               src={ subject.gif }
-              alt={subject.short + ` preview`}
               visible={ preview && preview === subject.short }
-              loop
-              muted
-              autoPlay
             />
           </ProjectItemTextContainer>
         </ProjectItem>

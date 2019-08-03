@@ -55,13 +55,14 @@ export const ProjectItemTitle = styled.h3`
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: center;
+  text-decoration: underline;
 `
 
 export const ProjectItemTechs = styled.p`
   color: ${ props => props.color };
   font-size: .9em;
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   line-height: 1.3;
 `
@@ -69,8 +70,9 @@ export const ProjectItemTechs = styled.p`
 export const ProjectItemDesc = styled.p`
   color: ${ props => props.color };
   font-size: .9em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   line-height: 1.5;
+  text-align: center;
 `
 
 export const ProjectLinkContainer = styled.div`
@@ -96,8 +98,9 @@ export const ProjectLink = styled.a.attrs( props => ({
   }
 `
 
-export const ProjectPreview = styled.video.attrs( props => ({
+export const ProjectPreview = styled.img.attrs( props => ({
   src: props.src,
+  alt: "preview gif"
 }))`
   width: 100%;
   height: auto;

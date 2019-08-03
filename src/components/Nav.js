@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import { Link } from "react-scroll";
 
 import { colors } from '../styles/variables';
-import { FlickerButton } from '../styles/animations';
 
 const Navbar = styled.nav`
   display: flex;
@@ -87,9 +86,6 @@ const Button = styled.button`
       3px 0 6px ${ colors.blue },
       0 3px 6px ${ colors.blue },
       0 -3px 6px ${ colors.blue };
-
-    animation:
-      10s 1s ${ FlickerButton };
   `}
 `
 

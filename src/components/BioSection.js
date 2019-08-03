@@ -72,6 +72,7 @@ const BioTitle = styled.h2`
   font-family: "Nixie One", sans-serif;
   font-size: 1.4em;
   text-align: right;
+
   text-shadow:
     0 0 10px #fff, 
     0 0 20px ${ colors.purple }, 

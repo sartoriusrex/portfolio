@@ -2,31 +2,6 @@ import { keyframes } from 'styled-components';
 
 import { colors } from '../styles/variables';
 
-export const FlickerButton = keyframes`
-  0%, .6%, 1.2% {
-    box-shadow: none;
-  }
-  .3%, .9%, 3%, 100% {
-    box-shadow: 
-      inset 0 0 1px #FFF,
-      0 0 1px #fff,
-
-      inset 2px 0 2px ${ colors.blue },  
-      inset -2px 0 2px ${ colors.blue }, 
-      inset 0 2px 2px ${ colors.blue },
-      inset 0 -2px 2px ${ colors.blue },
-      
-      inset 2px 0 5px ${ colors.blue },  
-      inset -2px 0 5px ${ colors.blue }, 
-      inset 0 2px 7px ${ colors.blue }, 
-      inset 0 -2px 5px ${ colors.blue }, 
-      
-      -3px 0 6px ${ colors.blue },  
-      3px 0 6px ${ colors.blue },
-      0 3px 6px ${ colors.blue },
-      0 -3px 6px ${ colors.blue };
-  }
-`
 
 export const TurnOnBorder = keyframes`
   0%, 9%, 11%, 19%, 26%, 29% {
