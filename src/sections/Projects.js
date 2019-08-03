@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import content from '../content';
 import { colors } from '../styles/variables';
-import { ProjectItem, ProjectItemTextContainer, ProjectItemTitle, ProjectItemTechs, ProjectItemDesc, ProjectLinkContainer, ProjectLink, ProjectPreview } from '../styles/general';
+import { ProjectItem, ProjectItemTextContainer, ProjectItemTitle, ProjectItemTechs, ProjectItemDesc, ProjectLinkContainer, ProjectLink, ProjectPreview, ProjectVideoPreview } from '../styles/general';
 
 const ThirdSection = styled.section`
   display: flex;
@@ -12,6 +12,7 @@ const ThirdSection = styled.section`
   width: 100%;
   min-height: 100vh;
   padding-top: 6em;
+  margin-bottom: 2em;
 `
 
 const ProjectSectionTitle = styled.h2`
@@ -54,12 +55,12 @@ const ProjectSection = () => {
             <ProjectItemTitle color={ subject.color }>
               { subject.title }
             </ProjectItemTitle>
-            <ProjectItemTechs color={ subject.color }>
-              Made with: { subject.technologies }
-            </ProjectItemTechs>
             <ProjectItemDesc color={ subject.color }>
               { subject.description }
             </ProjectItemDesc>
+            <ProjectItemTechs color={ subject.color }>
+              Made with: { subject.technologies }
+            </ProjectItemTechs>
             <ProjectLinkContainer>
               <ProjectLink 
                 as="button"
@@ -90,10 +91,21 @@ const ProjectSection = () => {
                 </ProjectLink>
               }
             </ProjectLinkContainer>
-            <ProjectPreview
+            {/* <ProjectPreview
               src={ subject.gif }
               visible={ preview && preview === subject.short }
-            />
+            /> */}
+            <ProjectVideoPreview 
+              src={ subject.vid }
+              alt={subject.short + ` preview`}
+              autoPlay 
+              muted
+              visible={ preview && preview === subject.short }
+              loop
+            >
+              <source src={ subject.vid } type="video/webm"/>
+              <source src={ subject.vidTwo } type="video/mp4"/>
+            </ProjectVideoPreview>
           </ProjectItemTextContainer>
         </ProjectItem>
       )}

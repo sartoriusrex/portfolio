@@ -53,7 +53,7 @@ export const ProjectItemTitle = styled.h3`
   color: ${ props => props.color };
   font-size: 1.4em;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   text-decoration: underline;
 `
@@ -111,12 +111,26 @@ export const ProjectPreview = styled.img.attrs( props => ({
   will-change: opacity, transform;
   display: none;
 
-  ${ props => props.src && css`
+  ${ props => props.visible && css`
+    display: inline-block;
     opacity: 1;
     transform: scale( 1 );
   `}
+`
+
+export const ProjectVideoPreview = styled.video`
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: scale( 0 );
+  transition: opacity 150ms ease-in, transform 150ms ease-in;
+  will-change: opacity, transform;
+  display: none;
 
   ${ props => props.visible && css`
     display: inline-block;
+    opacity: 1;
+    transform: scale( 1 );
   `}
 `
