@@ -51,11 +51,10 @@ export const ProjectItemTextContainer = styled.div`
 
 export const ProjectItemTitle = styled.h3`
   color: ${ props => props.color };
-  font-size: 1.4em;
+  font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 1.5rem;
   text-align: center;
-  text-decoration: underline;
 `
 
 export const ProjectItemTechs = styled.p`
