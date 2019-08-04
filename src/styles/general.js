@@ -118,19 +118,19 @@ export const ProjectPreview = styled.img.attrs( props => ({
   `}
 `
 
-export const ProjectVideoPreview = styled.video`
-  width: 100%;
-  height: auto;
-  margin-top: 1rem;
-  opacity: 0;
-  transform: scale( 0 );
-  transition: opacity 150ms ease-in, transform 150ms ease-in;
-  will-change: opacity, transform;
-  display: none;
+// export const ProjectVideoPreview = styled.video`
+//   width: 100%;
+//   height: auto;
+//   margin-top: 1rem;
+//   opacity: 0;
+//   transform: scale( 0 );
+//   transition: opacity 150ms ease-in, transform 150ms ease-in;
+//   will-change: opacity, transform;
+//   display: none;
 
-  ${ props => props.visible && css`
-    display: inline-block;
-    opacity: 1;
-    transform: scale( 1 );
-  `}
-`
+//   ${ props => props.visible && css`
+//     display: inline-block;
+//     opacity: 1;
+//     transform: scale( 1 );
+//   `}
+// `

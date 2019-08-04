@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import LazyLoad from 'react-lazy-load';
 
 import content from '../content';
 import { colors } from '../styles/variables';
@@ -91,10 +92,16 @@ const ProjectSection = () => {
                 </ProjectLink>
               }
             </ProjectLinkContainer>
-            <ProjectPreview
-              src={ subject.gif }
-              visible={ preview && preview === subject.short }
-            />
+            <LazyLoad 
+              debounce={ true }
+              offsetVertical={ 300 }
+            >
+              <ProjectPreview
+                src={ subject.gif }
+                visible={ preview && preview === subject.short }
+              />
+            </LazyLoad>
+            
             {/* <ProjectVideoPreview 
               src={ subject.vid }
               alt={subject.short + ` preview`}
