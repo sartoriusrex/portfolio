@@ -49,13 +49,13 @@ const content = {
     {
       short: "raven",
       title: "Raven",
-      technologies: "React, Hooks, Sketch, Zeplin, Heroku",
+      technologies: "React, Hooks, Sketch, Zeplin, Netlify, (And Heroku)",
       description: "Fully responsive React implementation of Sketch Design, which was only spec'ed for layouts 1440px wide.",
       gif: ravenGif,
       vid: ravenVid,
       vidTwo: ravenVidTwo,
       color: colors.purple,
-      live: "https://raven-landing-page.herokuapp.com/",
+      live: "https://raven-landing-page.netlify.com/",
       github: "https://github.com/sartoriusrex/raven-landing-page",
     }
   ],
