@@ -7,3 +7,7 @@ export const colors = {
   gray: "#AFAFAF",
   blackOverlay: "rgba( 0, 0, 0, .85)"
 }
+
+export const fonts = {
+  nixie: ' "Nixie One", sans-serif '
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import BioImg from '../images/bio.jpeg';
-import { colors } from '../styles/variables';
+import { colors, fonts } from '../styles/variables';
 import content from '../content';
 
 const BioSection = styled.div`
@@ -66,10 +66,8 @@ const BioTextContainer = styled.div`
 `
 
 const BioTitle = styled.h2`
-  @import url('https://fonts.googleapis.com/css?family=Nixie+One&display=swap');
-
   color: white;
-  font-family: "Nixie One", sans-serif;
+  font-family: ${ fonts.nixie };
   font-size: 1.4em;
   text-align: right;
 

@@ -16,6 +16,8 @@ import FooterSection from './sections/Footer';
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=swap');
 
+  @import url('https://fonts.googleapis.com/css?family=Nixie+One&display=swap');
+
   html {
     box-sizing: border-box;
     font-family: 'IBM Plex Mono', Mono, Roboto, sans-serif;

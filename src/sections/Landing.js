@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from "react-scroll";
 
 import { TurnOnBorder, TurnOnName, FlickerLetter } from '../styles/animations';
-import { colors } from '../styles/variables';
+import { colors, fonts } from '../styles/variables';
 import content from '../content';
 
 const FirstSection = styled.section`
@@ -55,10 +55,8 @@ const Intro = styled.h1`
 `
 
 const Name = styled.h1`
-  @import url('https://fonts.googleapis.com/css?family=Nixie+One&display=swap');
-
   color: white;
-  font-family: "Nixie One", sans-serif;
+  font-family: ${ fonts.nixie };
   font-size: 1.6em;
   text-align: center;
   text-shadow:

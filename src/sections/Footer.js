@@ -26,8 +26,10 @@ const FooterItem = styled.p`
 
 const FooterSection = () => (
   <Footer>
-    <FooterItem>Photos by Olssenh Tichoc, K8, and Geoffroy Hauwen on Unsplash</FooterItem>
     <FooterItem copyright >Copyright Dennis Mai 2019 ©</FooterItem>
+    <FooterItem>
+      Photos by Olssenh Tichoc, K8, and Geoffroy Hauwen on Unsplash
+    </FooterItem>
   </Footer>
 )
 
