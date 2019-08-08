@@ -118,7 +118,7 @@ const Nav = ({ selected, setSelected }) => (
         onClick={ () => setSelected( 'projects' ) } 
         selected={ selected === 'projects' ? selected : null } 
       >
-        Projects
+        Portfolio
       </Button>
     </Link>
     <Link

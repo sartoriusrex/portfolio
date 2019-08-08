@@ -162,7 +162,7 @@ const ProjectSection = () => {
 
   return(
     <ThirdSection id="projects">
-      <ProjectSectionTitle>Projects</ProjectSectionTitle>
+      <ProjectSectionTitle>Portfolio</ProjectSectionTitle>
       { content.projects.map( subject =>
         <ProjectItem 
           key={ subject.short }
