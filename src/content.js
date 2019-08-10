@@ -32,7 +32,7 @@ const content = {
       color: colors.blue,
       live: "https://jjd-client-v1.herokuapp.com/",
       github: "https://github.com/sartoriusrex/jjd-client",
-      githubServer: "https://github.com/sartoriusrex/jjd-server",
+      githubServer: "https://github.com/sartoriusrex/jjd-server-public",
     },
     {
       short: "usdt",
