@@ -12,7 +12,6 @@ const ThirdSection = styled.section`
   width: 100%;
   min-height: 100vh;
   padding-top: 6em;
-  margin-bottom: 2em;
 `
 
 const ProjectSectionTitle = styled.h2`
