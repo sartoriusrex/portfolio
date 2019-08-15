@@ -17,7 +17,7 @@ const FourthSection = styled.section`
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  padding-top: 4em;
+  padding-top: 6em;
 `
 
 const ViewPDF = styled.a.attrs( props => ({
