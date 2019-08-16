@@ -51,7 +51,7 @@ const Use = () => (
       <ListContainer>
         <ListHeader>Backend:</ListHeader>
         <List>
-          <ListItem>ES5 & ES6</ListItem>
+          <ListItem>ES5+ Javascript</ListItem>
           <ListItem>Node</ListItem>
           <ListItem>Mongo + Mongoose</ListItem>
           <ListItem>MySql</ListItem>
