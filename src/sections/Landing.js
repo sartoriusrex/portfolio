@@ -136,7 +136,7 @@ const LandingSection = ({ selected, setSelected }) => {
         to="about"
         smooth={ true }
         duration={ 100 }
-        offset={ 0 }
+        offset={ 100 }
         onSetActive={ () => setSelected( "about" ) }
       >
         <DownArrowContainer>
