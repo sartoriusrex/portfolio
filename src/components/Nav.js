@@ -14,12 +14,8 @@ const Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 35rem;
+  max-width: 37rem;
   border-radius: .5rem;
-  box-shadow: 
-    -8rem 0 0 .5rem ${ colors.blackOverlay },
-    8rem 0 0 .5rem ${ colors.blackOverlay },
-    0 0 0 .5rem ${ colors.blackOverlay };
 
   @media screen and (min-width: 900px) {
     width: auto;
@@ -35,7 +31,7 @@ const Navbar = styled.nav`
 
 const Button = styled.button`
   color: white;
-  margin: 1rem;
+  margin: 1rem .5rem;
   padding: .5rem;
   display: flex;
   justify-content: center;
