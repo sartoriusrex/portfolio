@@ -32,6 +32,7 @@ const ReadMoreButton = ({ toggleVisible, visible }) => {
     width: '1em',
     height: '1em',
     marginLeft: '1em',
+    transition: 'transform 100ms'
   }
 
   const styleVisibleTrue = {

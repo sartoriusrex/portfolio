@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import { TurnOnBorder, TurnOnName, FlickerLetter } from '../styles/animations';
 import { colors, fonts } from '../styles/variables';
 import content from '../content';
+import { ReactComponent as DownArrow } from '../images/down-arrow.svg';
 
 const FirstSection = styled.section`
   display: flex;
