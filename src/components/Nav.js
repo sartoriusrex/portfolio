@@ -46,24 +46,24 @@ const Button = styled.button`
     inset 0 0 1px #FFF,
     0 0 1px #fff,
 
-    inset 1px 0 1px ${ colors.yellow },  
-    inset -1px 0 1px ${ colors.yellow }, 
-    inset 0 1px 1px ${ colors.yellow },
-    inset 0 -1px 1px ${ colors.yellow },
+    inset 1px 0 1px ${ colors.turquoise },  
+    inset -1px 0 1px ${ colors.turquoise }, 
+    inset 0 1px 1px ${ colors.turquoise },
+    inset 0 -1px 1px ${ colors.turquoise },
     
-    inset 1px 0 3px ${ colors.yellow },  
-    inset -1px 0 3px ${ colors.yellow }, 
-    inset 0 1px 3px ${ colors.yellow }, 
-    inset 0 -1px 3px ${ colors.yellow }, 
+    inset 1px 0 3px ${ colors.turquoise },  
+    inset -1px 0 3px ${ colors.turquoise }, 
+    inset 0 1px 3px ${ colors.turquoise }, 
+    inset 0 -1px 3px ${ colors.turquoise }, 
     
-    -2px 0 4px ${ colors.yellow },  
-    2px 0 4px ${ colors.yellow },
-    0 2px 4px ${ colors.yellow },
-    0 -2px 4px ${ colors.yellow };
+    -2px 0 4px ${ colors.turquoise },  
+    2px 0 4px ${ colors.turquoise },
+    0 2px 4px ${ colors.turquoise },
+    0 -2px 4px ${ colors.turquoise };
 
   &:hover {
     filter: ${ props => props.selected === null &&
-      `drop-shadow( 0 0 .5em ${ colors.yellow } )`
+      `drop-shadow( 0 0 .5em ${ colors.turquoise } )`
     }
   }
 
@@ -76,20 +76,20 @@ const Button = styled.button`
 
   ${ props => props.selected !== null && css`
     box-shadow: 
-      inset 1px 0 1px ${ colors.blue },  
-      inset -1px 0 1px ${ colors.blue }, 
-      inset 0 1px 1px ${ colors.blue },
-      inset 0 -1px 1px ${ colors.blue },
+      inset 1px 0 1px ${ colors.purple },  
+      inset -1px 0 1px ${ colors.purple }, 
+      inset 0 1px 1px ${ colors.purple },
+      inset 0 -1px 1px ${ colors.purple },
       
-      inset 1px 0 3px ${ colors.blue },  
-      inset -1px 0 3px ${ colors.blue }, 
-      inset 0 1px 3px ${ colors.blue }, 
-      inset 0 -1px 3px ${ colors.blue }, 
+      inset 1px 0 3px ${ colors.purple },  
+      inset -1px 0 3px ${ colors.purple }, 
+      inset 0 1px 3px ${ colors.purple }, 
+      inset 0 -1px 3px ${ colors.purple }, 
       
-      -2px 0 4px ${ colors.blue },  
-      2px 0 4px ${ colors.blue },
-      0 2px 4px ${ colors.blue },
-      0 -2px 4px ${ colors.blue };
+      -2px 0 4px ${ colors.purple },  
+      2px 0 4px ${ colors.purple },
+      0 2px 4px ${ colors.purple },
+      0 -2px 4px ${ colors.purple };
   `}
 `
 
@@ -114,7 +114,7 @@ const Nav = ({ selected, setSelected }) => (
       to="projects"
       smooth={ true }
       duration={ 100 }
-      offset={ 40 }
+      offset={ 50 }
       onSetActive={ () => setSelected( 'projects' ) }
       spy={ true }
     >

@@ -37,9 +37,9 @@ const ContactSectionTitle = styled.h2`
   margin-bottom: 2em;
   text-shadow:
     0 0 10px #fff, 
-    0 0 30px ${ colors.yellow }, 
-    0 0 70px ${ colors.yellow }, 
-    0 0 100px ${ colors.yellow };
+    0 0 30px ${ colors.turquoise }, 
+    0 0 70px ${ colors.turquoise }, 
+    0 0 100px ${ colors.turquoise };
 `
 
 const ContactContainer = styled.div`
@@ -56,15 +56,15 @@ const ContactContainer = styled.div`
     inset 0 0 2px #FFF,
     0 0 2px #fff,           
     
-    inset 1px 0 4px ${ colors.yellow },  
-    inset -1px 0 4px ${ colors.yellow }, 
-    inset 0 1px 4px ${ colors.yellow },
-    inset 0 -1px 4px ${ colors.yellow },
+    inset 1px 0 4px ${ colors.turquoise },  
+    inset -1px 0 4px ${ colors.turquoise }, 
+    inset 0 1px 4px ${ colors.turquoise },
+    inset 0 -1px 4px ${ colors.turquoise },
     
-    -2px 0 4px ${ colors.yellow },  
-    2px 0 4px ${ colors.yellow },
-    0 2px 4px ${ colors.yellow },
-    0 -2px 4px ${ colors.yellow };
+    -2px 0 4px ${ colors.turquoise },  
+    2px 0 4px ${ colors.turquoise },
+    0 2px 4px ${ colors.turquoise },
+    0 -2px 4px ${ colors.turquoise };
 `
 
 const ContactItem = styled.div`
@@ -85,7 +85,7 @@ const style = {
     width: "13%",
     height: "13%",
     margin: "auto",
-    fill: colors.yellow,
+    fill: colors.turquoise,
   }
 }
 
@@ -126,7 +126,7 @@ const ContactLabel = styled.p`
 `
 
 const ContactText = styled.p`
-  color: ${ colors.yellow };
+  color: ${ colors.turquoise };
   font-size: .9em;
 `
 

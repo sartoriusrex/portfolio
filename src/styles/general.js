@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { colors } from './variables';
 
 export const BioDescriptionText = styled.p`
-  color: ${ colors.yellow };
+  color: ${ colors.turquoise };
   font-size: 1.3em;
   font-weight: bold;
   margin-bottom: .5em;
