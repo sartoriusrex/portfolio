@@ -23,6 +23,7 @@ const Navbar = styled.nav`
     flex-direction: column;
     align-self: start;
     bottom: 38%;
+    background-color: transparent;
   }
 `
 
