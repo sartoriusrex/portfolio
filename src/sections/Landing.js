@@ -14,7 +14,6 @@ const FirstSection = styled.section`
   align-items: center;
   width: 100%;
   height: 100vh;
-  margin-bottom: 2em;
 `
 
 const TitleContainer = styled.div`
@@ -90,6 +89,22 @@ const SubtitleParagraph = styled.p`
   color: white;
 `
 
+const DownArrowContainer = styled.div`
+  transform: translateY(-.5em);
+
+  &:hover {
+    transition: transform 100ms;
+    transform: translateY(0);
+  }
+`
+
+const downArrowStyle = {
+  fill: colors.purple, 
+  width: '2rem',
+  height: '2rem',
+  marginTop: '4rem',
+}
+
 const LandingSection = ({ selected, setSelected }) => {
   return(
     <FirstSection id="landing">
@@ -116,6 +131,17 @@ const LandingSection = ({ selected, setSelected }) => {
             { content.landing.subtitle }
           </SubtitleParagraph>
         </SubtitleContainer>
+      </Link>
+      <Link
+        to="about"
+        smooth={ true }
+        duration={ 100 }
+        offset={ 0 }
+        onSetActive={ () => setSelected( "about" ) }
+      >
+        <DownArrowContainer>
+          <DownArrow style={ downArrowStyle }/>
+        </DownArrowContainer>
       </Link>
     </FirstSection>
   )

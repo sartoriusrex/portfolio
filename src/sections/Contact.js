@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import PDF from '../mai_resume.pdf';
-import { colors } from '../styles/variables';
+// import PDF from '../mai_resume.pdf';
+import { colors, fonts } from '../styles/variables';
 import content from '../content';
 import { ReactComponent as Email } from '../images/email.svg';
 import { ReactComponent as Github } from '../images/github.svg';
 import { ReactComponent as Skype } from '../images/skype.svg';
 import { ReactComponent as Stackoverflow } from '../images/stackoverflow.svg';
 import { ReactComponent as Linkedin } from '../images/linkedin.svg';
+import { ReactComponent as PDF } from '../images/pdf.svg';
 
 const FourthSection = styled.section`
   display: flex;
@@ -18,14 +19,27 @@ const FourthSection = styled.section`
   width: 100%;
   min-height: 100vh;
   padding-top: 6em;
+  margin-bottom: 2em;
 `
 
-const ViewPDF = styled.a.attrs( props => ({
-  href: props.pdf,
-  target: "_blank"
-}))`
-  color: ${ colors.gray };
+// const ViewPDF = styled.a.attrs( props => ({
+//   href: props.pdf,
+//   target: "_blank"
+// }))`
+//   color: ${ colors.gray };
+//   margin: 2em;
+// `
+const ContactSectionTitle = styled.h2`
+  color: white;
+  font-family: ${ fonts.nixie };
+  font-size: 2em;
+  letter-spacing: .05em;
   margin-bottom: 2em;
+  text-shadow:
+    0 0 10px #fff, 
+    0 0 30px ${ colors.yellow }, 
+    0 0 70px ${ colors.yellow }, 
+    0 0 100px ${ colors.yellow };
 `
 
 const ContactContainer = styled.div`
@@ -36,8 +50,21 @@ const ContactContainer = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: .5em;
-  border .3em dashed ${ colors.yellow };
-  padding: 1em 0;
+  padding: 1em;
+
+  box-shadow: 
+    inset 0 0 2px #FFF,
+    0 0 2px #fff,           
+    
+    inset 1px 0 4px ${ colors.yellow },  
+    inset -1px 0 4px ${ colors.yellow }, 
+    inset 0 1px 4px ${ colors.yellow },
+    inset 0 -1px 4px ${ colors.yellow },
+    
+    -2px 0 4px ${ colors.yellow },  
+    2px 0 4px ${ colors.yellow },
+    0 2px 4px ${ colors.yellow },
+    0 -2px 4px ${ colors.yellow };
 `
 
 const ContactItem = styled.div`
@@ -75,7 +102,7 @@ const renderIcon = label => {
     case "Stackoverflow":
       return <Stackoverflow style={ style.icon }/>;
     default:
-      return <Email style={ style.icon }/>;
+      return <PDF style={ style.icon }/>;
   }
 }
 
@@ -106,10 +133,11 @@ const ContactText = styled.p`
 
 const ContactSection = () => (
   <FourthSection id="contact">
-    <ViewPDF pdf={ PDF }>View Resume</ViewPDF>
+    <ContactSectionTitle>Contact</ContactSectionTitle>
     <ContactContainer>
+      {/* <ViewPDF pdf={ PDF }>View Resume</ViewPDF> */}
       { content.contact.map( contact => 
-        <ContactItem key={ contact.label }>
+        <ContactItem key={ contact.link }>
           { renderIcon( contact.label ) }
           <ContactTextContainer link={ contact.link }>
             <ContactLabel>{ contact.label }</ContactLabel>

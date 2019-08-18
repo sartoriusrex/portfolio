@@ -16,6 +16,7 @@ const SecondSection = styled.section`
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  padding-top: 6rem;
 
   @media screen and (min-width: 1200px){
     display: grid;

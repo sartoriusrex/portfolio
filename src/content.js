@@ -8,6 +8,7 @@ import ravenVid from './images/raven-preview.webm';
 import jjdVidTwo from './images/raven-preview.mp4';
 import usdtVidTwo from './images/raven-preview.mp4';
 import ravenVidTwo from './images/raven-preview.mp4';
+import PDF from './mai_resume.pdf';
 
 const content = {
   landing: {
@@ -42,7 +43,7 @@ const content = {
       gif: usdtGif,
       vid: usdtVid,
       vidTwo: usdtVidTwo,
-      color: colors.pink,
+      color: colors.purple,
       live: "https://usdt-satire.herokuapp.com/",
       github: "https://github.com/sartoriusrex/USDT",
     },
@@ -54,12 +55,16 @@ const content = {
       gif: ravenGif,
       vid: ravenVid,
       vidTwo: ravenVidTwo,
-      color: colors.purple,
+      color: colors.pink,
       live: "https://raven-landing-page.netlify.com/",
       github: "https://github.com/sartoriusrex/raven-landing-page",
     }
   ],
   contact: [
+    {
+      text: "Download Resume",
+      link: PDF,
+    },
     {
       text: "dmai.developer@gmail.com",
       label: "Email",

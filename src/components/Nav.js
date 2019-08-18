@@ -103,7 +103,7 @@ const Nav = ({ selected, setSelected }) => (
       to="about"
       smooth={ true }
       duration={ 100 }
-      offset={ 40 }
+      offset={ 100 }
       onSetActive={ () => setSelected( 'about' ) }
       spy={ true }
     >
@@ -133,6 +133,7 @@ const Nav = ({ selected, setSelected }) => (
       to="contact"
       smooth={ true }
       duration={ 100 }
+      offset={ 100 }
       onSetActive={ () => setSelected( 'contact' ) }
       spy={ true }
     >
