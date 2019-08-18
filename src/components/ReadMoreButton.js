@@ -15,6 +15,10 @@ const Button = styled.button`
   font-size: .8em;
   z-index: 100;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &:active,
   &:focus {
     outline: none;

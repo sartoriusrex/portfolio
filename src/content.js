@@ -12,7 +12,7 @@ import ravenVidTwo from './images/raven-preview.mp4';
 const content = {
   landing: {
     intro: "Hey, I'm",
-    subtitle: "I build fast, responsive websites"
+    subtitle: "I build fast, responsive websites."
   },
   bio: {
     title: "Dennis Mai",

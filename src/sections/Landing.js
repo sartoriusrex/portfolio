@@ -27,23 +27,18 @@ const TitleContainer = styled.div`
   margin: 30px 10px;
   padding: .5em;
   box-shadow: 
-    inset 0 0 10px #FFF,
-    0 0 10px #fff,           
+    inset 0 0 2px #FFF,
+    0 0 2px #fff,           
     
-    inset 5px 0 5px ${ colors.purple },  
-    inset -5px 0 5px ${ colors.purple }, 
-    inset 0 5px 5px ${ colors.purple },
-    inset 0 -5px 5px ${ colors.purple },
+    inset 1px 0 4px ${ colors.purple },  
+    inset -1px 0 4px ${ colors.purple }, 
+    inset 0 1px 4px ${ colors.purple },
+    inset 0 -1px 4px ${ colors.purple },
     
-    inset 5px 0 7px ${ colors.purple },  
-    inset -5px 0 7px ${ colors.purple }, 
-    inset 0 5px 7px ${ colors.purple }, 
-    inset 0 -5px 7px ${ colors.purple }, 
-    
-    -7px 0 10px ${ colors.purple },  
-    7px 0 10px ${ colors.purple },
-    0 7px 10px ${ colors.purple },
-    0 -7px 10px ${ colors.purple };
+    -2px 0 4px ${ colors.purple },  
+    2px 0 4px ${ colors.purple },
+    0 2px 4px ${ colors.purple },
+    0 -2px 4px ${ colors.purple };
   animation: 2s 1s ${ TurnOnBorder };
 `
 
@@ -83,7 +78,7 @@ const SubtitleContainer = styled.div`
   display: flex;
   align-items: center;
   width: 85%;
-  max-width: 18em;
+  max-width: 19em;
   height: 6em;
 `
 
@@ -104,7 +99,7 @@ const LandingSection = ({ selected, setSelected }) => {
           ennis
           {' '}
           <LetterM>M</LetterM>
-          ai
+          ai.
         </Name>
       </TitleContainer>
       <Link

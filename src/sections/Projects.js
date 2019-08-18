@@ -40,20 +40,15 @@ const ProjectItem = styled.div`
     inset 0 0 2px #FFF,
     0 0 2px #fff,           
     
-    inset 2px 0 2px ${ props => props.color },  
-    inset -2px 0 2px ${ props => props.color }, 
-    inset 0 2px 2px ${ props => props.color },
-    inset 0 -2px 2px ${ props => props.color },
+    inset 1px 0 4px ${ props => props.color },  
+    inset -1px 0 4px ${ props => props.color }, 
+    inset 0 1px 4px ${ props => props.color },
+    inset 0 -1px 4px ${ props => props.color },
     
-    inset 2px 0 4px ${ props => props.color },  
-    inset -2px 0 4px ${ props => props.color }, 
-    inset 0 2px 4px ${ props => props.color }, 
-    inset 0 -2px 4px ${ props => props.color }, 
-    
-    -4px 0 7px ${ props => props.color },  
-    4px 0 7px ${ props => props.color },
-    0 4px 7px ${ props => props.color },
-    0 -4px 7px ${ props => props.color };
+    -2px 0 4px ${ props => props.color },  
+    2px 0 4px ${ props => props.color },
+    0 2px 4px ${ props => props.color },
+    0 -2px 4px ${ props => props.color };
 `
 
 const ProjectItemTextContainer = styled.div`
@@ -64,12 +59,23 @@ const ProjectItemTextContainer = styled.div`
   padding: 5%;
 `
 
-const ProjectItemTitle = styled.h3`
+const ProjectItemTitle = styled.a.attrs( props => ({
+  href: props.link,
+  rel: "noopener noreferrer",
+  target: "_blank"
+}))`
   color: ${ props => props.color };
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 1.5rem;
   text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    transition: text-shadow 200ms;
+    text-shadow: 
+      0 0 4px ${ props => props.color };
+  }
 `
 
 const ProjectItemTechs = styled.p`
@@ -109,6 +115,7 @@ const ProjectLink = styled.a.attrs( props => ({
   margin: 0 .2em;
   &:hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 `
 
@@ -168,7 +175,10 @@ const ProjectSection = () => {
           color={ subject.color  }
         >
           <ProjectItemTextContainer>
-            <ProjectItemTitle color={ subject.color }>
+            <ProjectItemTitle
+              color={ subject.color }
+              link={ subject.live }
+            >
               { subject.title }
             </ProjectItemTitle>
             <ProjectItemDesc color={ subject.color }>

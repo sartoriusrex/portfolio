@@ -17,9 +17,10 @@ const Footer = styled.footer`
 const FooterItem = styled.p`
   margin: 1rem 0;
   text-align: center;
+  font-size: .5rem;
 
   ${ props => props.copyright && css`
-    font-size: 2em;
+    font-size: 1.5em;
     opacity: 1;
   `}
 `

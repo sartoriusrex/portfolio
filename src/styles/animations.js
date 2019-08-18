@@ -10,23 +10,18 @@ export const TurnOnBorder = keyframes`
   
   10%, 12%, 23%, 28%, 30%, 100% {
     box-shadow: 
-      inset 0 0 10px #FFF,
-      0 0 10px #fff,
-    
-      inset 5px 0 5px ${ colors.purple },
-      inset -5px 0 5px ${ colors.purple },
-      inset 0 5px 5px ${ colors.purple },
-      inset 0 -5px 5px ${ colors.purple },
-
-      inset 5px 0 7px ${ colors.purple },
-      inset -5px 0 7px ${ colors.purple },
-      inset 0 5px 7px ${ colors.purple },
-      inset 0 -5px 7px ${ colors.purple },
-
-      -7px 0 10px ${ colors.purple },
-      7px 0 10px ${ colors.purple },
-      0 7px 10px ${ colors.purple },
-      0 -7px 10px ${ colors.purple };
+      inset 0 0 2px #FFF,
+      0 0 2px #fff,           
+      
+      inset 1px 0 4px ${ colors.purple },  
+      inset -1px 0 4px ${ colors.purple }, 
+      inset 0 1px 4px ${ colors.purple },
+      inset 0 -1px 4px ${ colors.purple },
+      
+      -2px 0 4px ${ colors.purple },  
+      2px 0 4px ${ colors.purple },
+      0 2px 4px ${ colors.purple },
+      0 -2px 4px ${ colors.purple };
   }
 `
 

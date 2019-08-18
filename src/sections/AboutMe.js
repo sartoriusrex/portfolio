@@ -35,31 +35,31 @@ const SecondSection = styled.section`
 `
 
 const HorizontalRule = styled.hr`
-  width: 100%;
+  width: 99%;
 
   overflow: hidden;
   border: none;
   margin: 1em 0;
-  height: .25em;
+  height: .15em;
   transform: ${ props => `rotate(${ props.deg })`};
   box-shadow: 
-    inset 0 0 2px #FFF,
-    0 0 2px #fff,           
+    inset 0 0 1px #FFF,
+    0 0 1px #fff,           
     
-    inset 2px 0 2px ${ colors.purple },  
-    inset -2px 0 2px ${ colors.purple }, 
-    inset 0 2px 2px ${ colors.purple },
-    inset 0 -2px 2px ${ colors.purple },
+    inset 1px 0 1px ${ colors.purple },  
+    inset -1px 0 1px ${ colors.purple }, 
+    inset 0 1px 1px ${ colors.purple },
+    inset 0 -1px 1px ${ colors.purple },
     
-    inset 2px 0 4px ${ colors.purple },  
-    inset -2px 0 4px ${ colors.purple }, 
-    inset 0 2px 4px ${ colors.purple }, 
-    inset 0 -2px 4px ${ colors.purple }, 
+    inset 1px 0 2px ${ colors.purple },  
+    inset -1px 0 2px ${ colors.purple }, 
+    inset 0 1px 2px ${ colors.purple }, 
+    inset 0 -1px 2px ${ colors.purple }, 
     
-    -4px 0 7px ${ colors.purple },  
-    4px 0 7px ${ colors.purple },
-    0 4px 7px ${ colors.purple },
-    0 -4px 7px ${ colors.purple };
+    -2px 0 4px ${ colors.purple },  
+    2px 0 4px ${ colors.purple },
+    0 2px 4px ${ colors.purple },
+    0 -2px 4px ${ colors.purple };
 
   @media screen and (min-width: 1200px) {
     grid-area: hr${ props => props.deg };
