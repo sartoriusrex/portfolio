@@ -40,7 +40,7 @@ const HorizontalRule = styled.hr`
 
   overflow: hidden;
   border: none;
-  margin: 1em 0;
+  margin: 3em 0;
   height: .15em;
   transform: ${ props => `rotate(${ props.deg })`};
   box-shadow: 
