@@ -6,13 +6,14 @@ import { colors } from '../styles/variables';
 
 const Navbar = styled.nav`
   display: flex;
-  background-color: transparent;
+  background-color: ${ colors.blackOverlay };
   width: 95%;
   position: fixed;
   bottom: 0;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 25rem;
 
   @media screen and (min-width: 900px) {
@@ -27,35 +28,35 @@ const Navbar = styled.nav`
 
 const Button = styled.button`
   color: white;
-  margin: .2em auto 20px;
-  padding: 1em;
+  margin: 1rem;
+  padding: .5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3em;
+  height: 2.5em;
   width: 7em;
   border-radius: .5em;
-  border: .5px solid white;
+  border: .4px solid white;
   background-color: black;
-  font-size: .9em;
+  font-size: .8em;
   box-shadow: 
     inset 0 0 1px #FFF,
     0 0 1px #fff,
 
-    inset 2px 0 2px ${ colors.yellow },  
-    inset -2px 0 2px ${ colors.yellow }, 
-    inset 0 2px 2px ${ colors.yellow },
-    inset 0 -2px 2px ${ colors.yellow },
+    inset 1px 0 1px ${ colors.yellow },  
+    inset -1px 0 1px ${ colors.yellow }, 
+    inset 0 1px 1px ${ colors.yellow },
+    inset 0 -1px 1px ${ colors.yellow },
     
-    inset 2px 0 5px ${ colors.yellow },  
-    inset -2px 0 5px ${ colors.yellow }, 
-    inset 0 2px 7px ${ colors.yellow }, 
-    inset 0 -2px 5px ${ colors.yellow }, 
+    inset 1px 0 3px ${ colors.yellow },  
+    inset -1px 0 3px ${ colors.yellow }, 
+    inset 0 1px 3px ${ colors.yellow }, 
+    inset 0 -1px 3px ${ colors.yellow }, 
     
-    -3px 0 6px ${ colors.yellow },  
-    3px 0 6px ${ colors.yellow },
-    0 3px 6px ${ colors.yellow },
-    0 -3px 6px ${ colors.yellow };
+    -2px 0 4px ${ colors.yellow },  
+    2px 0 4px ${ colors.yellow },
+    0 2px 4px ${ colors.yellow },
+    0 -2px 4px ${ colors.yellow };
 
   &:hover {
     filter: ${ props => props.selected === null &&
@@ -72,20 +73,20 @@ const Button = styled.button`
 
   ${ props => props.selected !== null && css`
     box-shadow: 
-      inset 2px 0 2px ${ colors.blue },  
-      inset -2px 0 2px ${ colors.blue }, 
-      inset 0 2px 2px ${ colors.blue },
-      inset 0 -2px 2px ${ colors.blue },
+      inset 1px 0 1px ${ colors.blue },  
+      inset -1px 0 1px ${ colors.blue }, 
+      inset 0 1px 1px ${ colors.blue },
+      inset 0 -1px 1px ${ colors.blue },
       
-      inset 2px 0 5px ${ colors.blue },  
-      inset -2px 0 5px ${ colors.blue }, 
-      inset 0 2px 7px ${ colors.blue }, 
-      inset 0 -2px 5px ${ colors.blue }, 
+      inset 1px 0 3px ${ colors.blue },  
+      inset -1px 0 3px ${ colors.blue }, 
+      inset 0 1px 3px ${ colors.blue }, 
+      inset 0 -1px 3px ${ colors.blue }, 
       
-      -3px 0 6px ${ colors.blue },  
-      3px 0 6px ${ colors.blue },
-      0 3px 6px ${ colors.blue },
-      0 -3px 6px ${ colors.blue };
+      -2px 0 4px ${ colors.blue },  
+      2px 0 4px ${ colors.blue },
+      0 2px 4px ${ colors.blue },
+      0 -2px 4px ${ colors.blue };
   `}
 `
 

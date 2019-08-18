@@ -35,11 +35,11 @@ const Love = () => (
       I love: <Brackets>[</Brackets>
     </BioDescriptionText>
     <List>
-      <ListItem>“Building fast, responsive websites”,</ListItem>
-      <ListItem>“Learning new tech and languages”,</ListItem>
-      <ListItem>“Making ideas come to life“,</ListItem>
-      <ListItem>“Brazilian Jiu Jitsu”,</ListItem>
-      <ListItem>“The 80s + Synthwave”</ListItem>
+      <ListItem>Building fast, responsive websites,</ListItem>
+      <ListItem>Learning new tech and languages,</ListItem>
+      <ListItem>Making ideas come to life,</ListItem>
+      <ListItem>Brazilian Jiu Jitsu,</ListItem>
+      <ListItem>The 80s + Synthwave</ListItem>
     </List>
     <Brackets>]</Brackets>
   </LoveContainer>

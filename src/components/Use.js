@@ -72,7 +72,6 @@ const Use = () => (
           <ListItem>Redux, Redux-Form</ListItem>
           <ListItem>Styled-components</ListItem>
           <ListItem>jQuery</ListItem>
-          <ListItem>Node</ListItem>
         </List>
       </ListContainer>
     </UseTextContainer>
