@@ -11,7 +11,7 @@ const ThirdSection = styled.section`
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  padding-top: 6em;
+  padding-top: 2rem;
 `
 
 const ProjectSectionTitle = styled.h2`
@@ -19,7 +19,7 @@ const ProjectSectionTitle = styled.h2`
   font-family: ${ fonts.nixie };
   font-size: 2em;
   letter-spacing: .05em;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
   text-shadow:
     0 0 10px #fff, 
     0 0 20px ${ colors.purple }, 
@@ -157,7 +157,7 @@ const ProjectPreview = styled.img.attrs( props => ({
 //   `}
 // `
 
-const ProjectSection = () => {
+const ProjectSection = React.forwardRef( (props, ref) => {
   const [ preview, setPreview ] = useState( null );
 
   const handleClick = subject => {
@@ -167,8 +167,9 @@ const ProjectSection = () => {
   }
 
   return(
-    <ThirdSection id="projects">
+    <ThirdSection ref={ ref } id="projects">
       <ProjectSectionTitle>Portfolio</ProjectSectionTitle>
+
       { content.projects.map( subject =>
         <ProjectItem 
           key={ subject.short }
@@ -181,12 +182,15 @@ const ProjectSection = () => {
             >
               { subject.title }
             </ProjectItemTitle>
+
             <ProjectItemDesc color={ subject.color }>
               { subject.description }
             </ProjectItemDesc>
+
             <ProjectItemTechs color={ subject.color }>
               Made with: { subject.technologies }
             </ProjectItemTechs>
+
             <ProjectLinkContainer>
               <ProjectLink 
                 as="button"
@@ -196,18 +200,21 @@ const ProjectSection = () => {
               >
                 Preview
               </ProjectLink>
+
               <ProjectLink
                 link={ subject.live }
                 color={ subject.color }
               >
                 Live
               </ProjectLink>
+
               <ProjectLink
                 link={ subject.github }
                 color={ subject.color }
               >
                 Github
               </ProjectLink>
+
               { subject.githubServer &&
                 <ProjectLink
                   link={ subject.githubServer }
@@ -217,6 +224,7 @@ const ProjectSection = () => {
                 </ProjectLink>
               }
             </ProjectLinkContainer>
+
             <LazyLoad 
               debounce={ true }
               offsetVertical={ 300 }
@@ -244,6 +252,6 @@ const ProjectSection = () => {
 
     </ThirdSection>
   )
-}
+});
 
 export default ProjectSection;

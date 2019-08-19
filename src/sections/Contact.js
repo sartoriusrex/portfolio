@@ -18,7 +18,7 @@ const FourthSection = styled.section`
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  padding-top: 6em;
+  padding-top: 2rem;
   margin-bottom: 2em;
 `
 
@@ -34,7 +34,7 @@ const ContactSectionTitle = styled.h2`
   font-family: ${ fonts.nixie };
   font-size: 2em;
   letter-spacing: .05em;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
   text-shadow:
     0 0 10px #fff, 
     0 0 30px ${ colors.turquoise }, 
@@ -131,9 +131,10 @@ const ContactText = styled.p`
 `
 
 
-const ContactSection = () => (
-  <FourthSection id="contact">
+const ContactSection = React.forwardRef( (props, ref) => (
+  <FourthSection ref={ ref } id="contact">
     <ContactSectionTitle>Contact</ContactSectionTitle>
+
     <ContactContainer>
       {/* <ViewPDF pdf={ PDF }>View Resume</ViewPDF> */}
       { content.contact.map( contact => 
@@ -141,12 +142,13 @@ const ContactSection = () => (
           { renderIcon( contact.label ) }
           <ContactTextContainer link={ contact.link }>
             <ContactLabel>{ contact.label }</ContactLabel>
+
             <ContactText >{ contact.text }</ContactText>
           </ContactTextContainer>
         </ContactItem>  
       )}
     </ContactContainer>
   </FourthSection>
-)
+));
 
 export default ContactSection;

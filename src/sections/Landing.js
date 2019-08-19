@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from "react-scroll";
 
 import { TurnOnBorder, TurnOnName, FlickerLetter } from '../styles/animations';
 import { colors, fonts } from '../styles/variables';
@@ -89,12 +88,16 @@ const SubtitleParagraph = styled.p`
   color: white;
 `
 
-const DownArrowContainer = styled.div`
+const DownArrowContainer = styled.a.attrs( props => ({
+  href: props.href,
+}))`
   transform: translateY(-.5em);
+  text-decoration: none;
 
   &:hover {
     transition: transform 100ms;
     transform: translateY(0);
+    cursor: pointer;
   }
 `
 
@@ -106,10 +109,12 @@ const downArrowStyle = {
 }
 
 const LandingSection = ({ selected, setSelected }) => {
+
   return(
     <FirstSection id="landing">
       <TitleContainer>
         <Intro>{ content.landing.intro }</Intro>
+        
         <Name>
           <LetterD>D</LetterD>
           ennis
@@ -118,31 +123,19 @@ const LandingSection = ({ selected, setSelected }) => {
           ai.
         </Name>
       </TitleContainer>
-      <Link
-        to="landing"
-        smooth={ true }
-        duration={ 50 }
-        offset={ 0 }
-        onSetActive={ () => setSelected( null ) }
-        spy={ true }
-      >
-        <SubtitleContainer >
-          <SubtitleParagraph>
-            { content.landing.subtitle }
-          </SubtitleParagraph>
-        </SubtitleContainer>
-      </Link>
-      <Link
-        to="about"
-        smooth={ true }
-        duration={ 100 }
-        offset={ 100 }
-        onSetActive={ () => setSelected( "about" ) }
-      >
-        <DownArrowContainer>
-          <DownArrow style={ downArrowStyle }/>
-        </DownArrowContainer>
-      </Link>
+
+      <SubtitleContainer >
+        <SubtitleParagraph>
+          { content.landing.subtitle }
+        </SubtitleParagraph>
+      </SubtitleContainer>
+
+      <DownArrowContainer href="#about">
+        <DownArrow 
+          style={ downArrowStyle }
+          onClick={ () => setSelected('about') }
+        />
+      </DownArrowContainer>
     </FirstSection>
   )
 }

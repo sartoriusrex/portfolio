@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Link } from "react-scroll";
 
 import { colors } from '../styles/variables';
 
@@ -29,7 +28,9 @@ const Navbar = styled.nav`
   }
 `
 
-const Button = styled.button`
+const Button = styled.a.attrs( props => ({
+  href: props.href,
+}))`
   color: white;
   margin: 1rem .5rem;
   padding: .5rem;
@@ -42,6 +43,7 @@ const Button = styled.button`
   border: .4px solid white;
   background-color: black;
   font-size: .8em;
+  text-decoration: none;
   box-shadow: 
     inset 0 0 1px #FFF,
     0 0 1px #fff,
@@ -62,6 +64,7 @@ const Button = styled.button`
     0 -2px 4px ${ colors.turquoise };
 
   &:hover {
+    cursor: pointer;
     filter: ${ props => props.selected === null &&
       `drop-shadow( 0 0 .5em ${ colors.turquoise } )`
     }
@@ -93,54 +96,35 @@ const Button = styled.button`
   `}
 `
 
-const Nav = ({ selected, setSelected }) => (
-  <Navbar>
-    <Link
-      to="about"
-      smooth={ true }
-      duration={ 100 }
-      offset={ 100 }
-      onSetActive={ () => setSelected( 'about' ) }
-      spy={ true }
-    >
+const Nav = ({ selected, setSelected }) => {
+
+  return(
+    <Navbar>
       <Button 
-        onClick={ () => setSelected( 'about' ) } 
+        onClick={ () => setSelected('about') } 
         selected={ selected === 'about' ? selected : null }
+        href="#about"
       >
         About
       </Button>
-    </Link>
-    <Link
-      to="projects"
-      smooth={ true }
-      duration={ 100 }
-      offset={ 50 }
-      onSetActive={ () => setSelected( 'projects' ) }
-      spy={ true }
-    >
+    
       <Button 
-        onClick={ () => setSelected( 'projects' ) } 
+        onClick={ () => setSelected('projects') } 
         selected={ selected === 'projects' ? selected : null } 
+        href="#projects"
       >
         Portfolio
       </Button>
-    </Link>
-    <Link
-      to="contact"
-      smooth={ true }
-      duration={ 100 }
-      offset={ 100 }
-      onSetActive={ () => setSelected( 'contact' ) }
-      spy={ true }
-    >
+    
       <Button 
-        onClick={ () => setSelected( 'contact' ) } 
+        onClick={ () => setSelected('contact') } 
         selected={ selected === 'contact' ? selected : null } 
+        href="#contact"
       >
         Contact
       </Button>
-    </Link>
-  </Navbar>
-)
+    </Navbar>
+  );
+}
 
 export default Nav;

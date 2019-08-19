@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import debounce from 'lodash.debounce';
 
 import { colors } from '../styles/variables';
 import BioContainer from '../components/BioSection';
@@ -16,7 +17,7 @@ const SecondSection = styled.section`
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  padding-top: 6rem;
+  padding-top: 2rem;
 
   @media screen and (min-width: 1200px){
     display: grid;
@@ -69,48 +70,36 @@ const HorizontalRule = styled.hr`
   }
 `
 
-const AboutMeSection = () => {
+const AboutMeSection = React.forwardRef( ( props, ref ) => {
   const [ visible, setVisible ] = useState( false );
   const [ width, setWidth ] = useState( null );
 
-  function debounce( func, wait, immediate ) {
-    let timeout;
-
-    return function() {
-      let context = this, args = arguments;
-      const later = function() {
-        timeout = null;
-        if ( !immediate ) func.apply( context, args );
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout( timeout );
-      timeout = setTimeout( later, wait );
-      if ( callNow ) func.apply( context, args );
-    };
-  };
-
   useEffect( () => {
-    // Update the width state if windowWidth is 1200 or greater, and if width is big, make visible true to show moreaboutmetext
-    const updateWidth = windowWidth => {
-      windowWidth > 1199 ?
-      setWidth( "big" ) :
-      setWidth( "small" )
+    // Update the width state if windowWidth is 1200 or greater, and if width is big, make visible true to show moreaboutmetext - Debounce the function - wait until user stops resizing and run after 500ms
+    const updateWidth = debounce( function( windowWidth ){
+      if ( windowWidth > 1199 ) {
+        setWidth( "big" );
+        setVisible( true );
+      } else {
+        setWidth( "small" );
+        setVisible( false );
+      }
 
-      width === "big" ? setVisible( true ) : setVisible( false );
-    }
+    }, 500 );
 
-    // debounce to delay execution of updatewidth function by 400ms to improve performance
-    const listenWidth = () => {
-      debounce( updateWidth( window.innerWidth ), 400 );
-    }
-
-    window.addEventListener( 'resize', listenWidth );
+    window.addEventListener( 
+      'resize', 
+      () => updateWidth( window.window.innerWidth ) 
+    );
 
     // cleanup = remove eventlistener on unmount
     return () => {
-      window.removeEventListener( 'resize', listenWidth );
+      window.removeEventListener( 
+        'resize', 
+        () => updateWidth( window.window.innerWidth ) 
+      );
     }
-  }, [ width ] )
+  }, [ props, width ] )
 
   // compare window size and set visible to true of greater than 1199px and width to small, only on mount and unmount;
   useEffect( () => {
@@ -126,21 +115,27 @@ const AboutMeSection = () => {
   }
 
   return(
-    <SecondSection id="about">
+    <SecondSection ref={ ref } id="about">
       <BioContainer />
-      { width === "small" &&
+      { 
+        width === "small" &&
         <ReadMoreButton 
-        toggleVisible={ toggleVisible } 
-        visible={ visible }
-      />
+          toggleVisible={ toggleVisible } 
+          visible={ visible }
+        />
       }
+
       <MoreAboutMe visible={ visible }/>
+
       <HorizontalRule deg="5deg" />
+
       <Love />
+
       <Use />
+
       <HorizontalRule deg="-5deg" />
     </SecondSection>
   )
-}
+});
 
 export default AboutMeSection;

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Normalize } from 'styled-normalize';
 import styled, { createGlobalStyle } from 'styled-components';
+import throttle from 'lodash.throttle';
 
 import radiocity from './images/background-left.jpg';
 import adelante from './images/adelante.jpg';
@@ -68,19 +69,120 @@ const AppWrapper = styled.main`
 
 const App = () => {
   const [ selected, setSelected ] = useState( null );
+  const [ aboutRef, setAboutRef ] = useState( null );
+  const [ projectsRef, setProjectsRef ] = useState( null );
+  const [ contactRef, setContactRef ] = useState( null );
+  
+
+  const aboutSection = useCallback( node => {
+    if( node !== null ) {
+      // setAboutY( node.getBoundingClientRect().top + 100 );
+      setAboutRef( node.getBoundingClientRect() );
+    }
+  }, []);
+
+  const projectSection = useCallback( node => {
+    if( node !== null ) {
+      setProjectsRef( node.getBoundingClientRect() );
+    }
+  }, []);
+
+  const contactSection = useCallback( node => {
+    if( node !== null ) {
+      setContactRef( node.getBoundingClientRect() );
+    }
+  }, []);
+
+  let bound = window.screen.availHeight / 3;
+  let about = aboutRef ? aboutRef.top - bound : 0 ;
+  let project = projectsRef ? projectsRef.top - bound : 0;
+  let contact = contactRef ? contactRef.top - bound : 0;
+
+
+
+  useEffect( () => {
+    function listenScroll( scrollPosition ) {
+      console.log( scrollPosition );
+
+      if( scrollPosition > contact ){
+        setSelected( 'contact' )
+      } else if ( scrollPosition > project ) {
+        setSelected( 'projects' );
+      } else if ( scrollPosition > about ) {
+        setSelected( 'about')
+      } else {
+        setSelected( null );
+      }
+    }
+
+    window.addEventListener( 
+      'scroll', 
+      () => listenScroll( window.pageYOffset )
+    );
+
+    return () => {
+      window.removeEventListener( 
+        'scroll', 
+        () => listenScroll( window.pageYOffset )
+      );
+    }
+  }, [ about, project, contact ] );
+
+  
+
+  // let scrollPosition = window.pageYOffset;
+  // let bound = window.screen.availHeight / 3;
+  // let aboutLower = aboutRef.bottom - bound;
+  // let aboutUpper = aboutRef.top - bound;
+
+  // useEffect( () => {
+    
+  //   console.log( window.pageYOffset );
+  //   // const updateWindowPosition = scrollPosition => {
+  //   //   let bound = window.screen.availHeight / 3;
+  //   //   let aboutLower = aboutRef.bottom - bound;
+  //   //   let aboutUpper = aboutRef.top - bound;
+  //   //   let projectsLower = projectsRef.bottom - bound;
+  //   //   let projectsUpper = projectsRef.top - bound;
+  //   //   let contactLower = contactRef.bottom - bound;
+  //   //   let contactUpper = contactRef.top - bound;
+  //   //   console.log(scrollPosition);
+  //   //   console.log( scrollPosition < aboutLower && scrollPosition > aboutUpper );
+
+  //   //   // if ( scrollPosition <= aboutUpper && scrollPosition > aboutLower ){
+  //   //   //   setSelected( 'about' );
+  //   //   // } else if ( scrollPosition <= projectsUpper && scrollPosition > projectsLower ) {
+  //   //   //   setSelected( 'projects' );
+  //   //   // } else if ( scrollPosition <= contactUpper && scrollPosition > contactLower ) {
+  //   //   //   setSelected( 'contact' );
+  //   //   // } else {
+  //   //   //   setSelected( null );
+  //   //   // }
+  //   // }
+
+  //   // const listenScroll = () => {
+  //   //   updateWindowPosition( window.pageYOffset );
+  //   // }
+
+  //   // window.addEventListener( 'scroll', listenScroll )
+
+  //   // return () => {
+  //   //   window.removeEventListener( 'scroll', throttle( listenScroll, 1000000 ) );
+  //   // }
+  // }, [  ]);
 
   return(
     <>
       <Normalize />
       <GlobalStyle />
-      <AppWrapper>
+      <AppWrapper >
         <LandingSection 
           selected={ selected } 
           setSelected={ setSelected }
         />
-        <AboutMeSection />
-        <ProjectSection />
-        <ContactSection />
+        <AboutMeSection ref={ aboutSection } />
+        <ProjectSection ref={ projectSection }/>
+        <ContactSection ref={ contactSection }/>
         <FooterSection />
         <Nav 
           selected={ selected } 
