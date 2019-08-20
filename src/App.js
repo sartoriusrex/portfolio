@@ -111,7 +111,7 @@ const App = () => {
       } else {
         setSelected( null );
       }
-    }, 400 );
+    }, 250 );
 
     window.addEventListener( 
       'scroll', 
