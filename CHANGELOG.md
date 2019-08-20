@@ -1,5 +1,18 @@
 Version 1.1.0
 
+19/08/2-19 version 1.1.1
+
+#Bug Fixes
+
+1. Refactor: removed react-scroll as dependency and hand-rolled navigation, without smooth scrolling
+2. Correctly implement debounce (from lodash) on window resizing and on scroll events to correctly set selected section
+3. Update styling on borders, punctuation, and removed duplicate node from use list.
+4. Add arrow indicator to scroll from landing page, necessary if viewing site in in-app browser such as linkedIn or Reddit.
+5. Swap Yellow Color for Turqoise.
+6. Update border for contact container to match rest of app.
+7. Move Download PDF to contact section with similar formatting.
+8. Decrease size of footer fonts.
+
 02/08/2019 version 1.1.0
 
 # Updates
