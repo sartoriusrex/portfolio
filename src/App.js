@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { Normalize } from 'styled-normalize';
 import styled, { createGlobalStyle } from 'styled-components';
-import throttle from 'lodash.throttle';
+import debounce from 'lodash.debounce';
 
 import radiocity from './images/background-left.jpg';
 import adelante from './images/adelante.jpg';
@@ -69,51 +69,43 @@ const AppWrapper = styled.main`
 
 const App = () => {
   const [ selected, setSelected ] = useState( null );
-  const [ aboutRef, setAboutRef ] = useState( null );
-  const [ projectsRef, setProjectsRef ] = useState( null );
-  const [ contactRef, setContactRef ] = useState( null );
+  const [ aboutRef, setAboutRef ] = useState( 0 );
+  const [ projectsRef, setProjectsRef ] = useState( 0 );
+  const [ contactRef, setContactRef ] = useState( 0 );
   
+  const bound = window.screen.availHeight / 3;
 
   const aboutSection = useCallback( node => {
     if( node !== null ) {
       // setAboutY( node.getBoundingClientRect().top + 100 );
-      setAboutRef( node.getBoundingClientRect() );
+      setAboutRef( node.getBoundingClientRect().top - bound );
     }
-  }, []);
+  }, [ bound ]);
 
   const projectSection = useCallback( node => {
     if( node !== null ) {
-      setProjectsRef( node.getBoundingClientRect() );
+      setProjectsRef( node.getBoundingClientRect().top - bound );
     }
-  }, []);
+  }, [ bound ]);
 
   const contactSection = useCallback( node => {
     if( node !== null ) {
-      setContactRef( node.getBoundingClientRect() );
+      setContactRef( node.getBoundingClientRect().top - bound );
     }
-  }, []);
-
-  let bound = window.screen.availHeight / 3;
-  let about = aboutRef ? aboutRef.top - bound : 0 ;
-  let project = projectsRef ? projectsRef.top - bound : 0;
-  let contact = contactRef ? contactRef.top - bound : 0;
-
-
+  }, [ bound ]);
 
   useEffect( () => {
-    function listenScroll( scrollPosition ) {
-      console.log( scrollPosition );
-
-      if( scrollPosition > contact ){
-        setSelected( 'contact' )
-      } else if ( scrollPosition > project ) {
-        setSelected( 'projects' );
-      } else if ( scrollPosition > about ) {
-        setSelected( 'about')
+    const listenScroll = debounce( function( scrollPosition ) {
+      if( scrollPosition > contactRef ){
+        selected !== 'contact' && setSelected( 'contact' )
+      } else if ( scrollPosition > projectsRef ) {
+        selected !== 'projects' && setSelected( 'projects' );
+      } else if ( scrollPosition > aboutRef ) {
+        selected !== 'about' && setSelected( 'about')
       } else {
         setSelected( null );
       }
-    }
+    }, 400 );
 
     window.addEventListener( 
       'scroll', 
@@ -126,7 +118,7 @@ const App = () => {
         () => listenScroll( window.pageYOffset )
       );
     }
-  }, [ about, project, contact ] );
+  }, [ aboutRef, projectsRef, contactRef, selected ] );
 
   
 
