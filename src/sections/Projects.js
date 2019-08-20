@@ -167,7 +167,7 @@ const ProjectSection = React.forwardRef( (props, ref) => {
   }
 
   return(
-    <ThirdSection ref={ ref } id="projects">
+    <ThirdSection ref={ ref } id="projects" >
       <ProjectSectionTitle>Portfolio</ProjectSectionTitle>
 
       { content.projects.map( subject =>

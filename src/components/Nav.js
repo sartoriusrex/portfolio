@@ -9,7 +9,7 @@ const Navbar = styled.nav`
   width: 95%;
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 10000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,6 +26,10 @@ const Navbar = styled.nav`
     background-color: transparent;
     box-shadow: none;
   }
+
+  ${ props => props.visible && css`
+    z-index: 1;
+  `}
 `
 
 const Button = styled.a.attrs( props => ({
@@ -96,10 +100,10 @@ const Button = styled.a.attrs( props => ({
   `}
 `
 
-const Nav = ({ selected, setSelected }) => {
+const Nav = ({ selected, setSelected, visible }) => {
 
   return(
-    <Navbar>
+    <Navbar visible={ visible }>
       <Button 
         onClick={ () => setSelected('about') } 
         selected={ selected === 'about' ? selected : null }

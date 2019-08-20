@@ -111,7 +111,7 @@ const downArrowStyle = {
 const LandingSection = ({ selected, setSelected }) => {
 
   return(
-    <FirstSection id="landing">
+    <FirstSection id="landing" >
       <TitleContainer>
         <Intro>{ content.landing.intro }</Intro>
         

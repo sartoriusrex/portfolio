@@ -7,7 +7,7 @@ import content from '../content';
 
 const MoreAboutMeContainer = styled.div`
   width: 100%;
-  max-width: 30em;
+  max-width: 35rem;
   margin: .5em 0;
   position: relative;
   z-index: 10;
@@ -15,6 +15,7 @@ const MoreAboutMeContainer = styled.div`
   opacity: 0;
   transform: translateY( -2em );
   transition: transform 150ms ease-in, opacity 150ms ease-in;
+  overscroll-behavior: none;
 
   ${ props => props.visible && css`
     transform: translateY( 0em );

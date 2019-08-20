@@ -5,6 +5,7 @@ Version 1.1.0
 #Bug Fixes
 
 1. Refactor background image on small screens to display only linear-gradient, and change background to background-image 
+2. Refactor and add modal background to improve UX when user clicks ReadMoreButton.
 
 19/08/2019 version 1.1.1
 

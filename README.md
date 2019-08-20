@@ -2,9 +2,9 @@ Personal Website and Portfolio:
 
 Built with: React, Hooks, Deployed on Netlify;
 
-Updated 19/08/2019
+Updated 20/08/2019
 
-Version 1.1.1
+Version 1.1.2
 
 #Next update
 

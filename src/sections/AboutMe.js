@@ -71,8 +71,8 @@ const HorizontalRule = styled.hr`
 `
 
 const AboutMeSection = React.forwardRef( ( props, ref ) => {
-  const [ visible, setVisible ] = useState( false );
   const [ width, setWidth ] = useState( null );
+  const { visible, setVisible } = props;
 
   useEffect( () => {
     // Update the width state if windowWidth is 1200 or greater, and if width is big, make visible true to show moreaboutmetext - Debounce the function - wait until user stops resizing and run after 500ms
@@ -99,14 +99,14 @@ const AboutMeSection = React.forwardRef( ( props, ref ) => {
         () => updateWidth( window.window.innerWidth ) 
       );
     }
-  }, [ props, width ] )
+  }, [ props, width, setVisible ] )
 
   // compare window size and set visible to true of greater than 1199px and width to small, only on mount and unmount;
   useEffect( () => {
     window.innerWidth > 1199 ?
     setVisible( true ) && setWidth( "big" ) :
     setWidth( "small" );
-  },[])
+  },[ setVisible ])
 
   const toggleVisible = () => {
     visible === false ?
@@ -115,7 +115,7 @@ const AboutMeSection = React.forwardRef( ( props, ref ) => {
   }
 
   return(
-    <SecondSection ref={ ref } id="about">
+    <SecondSection ref={ ref } id="about" visible={ visible }>
       <BioContainer />
       { 
         width === "small" &&

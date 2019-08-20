@@ -6,6 +6,7 @@ import debounce from 'lodash.debounce';
 import adelante from './images/adelante.jpg';
 import bonjour from './images/bonjour.jpg';
 import { colors } from './styles/variables';
+import ModalBackground from './components/ModalBackground';
 import Nav from './components/Nav';
 import LandingSection from './sections/Landing';
 import AboutMeSection from './sections/AboutMe';
@@ -26,12 +27,19 @@ const GlobalStyle = createGlobalStyle`
   * {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
   }
 
   *,
   *::before,
   *::after {
     box-sizing: inherit;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 `
 
@@ -47,6 +55,7 @@ const AppWrapper = styled.main`
       black 4%
     );
   width: 100%;
+  position: relative;
 
   @media screen and (min-width: 500px) {
     background:
@@ -65,6 +74,7 @@ const AppWrapper = styled.main`
 
 const App = () => {
   const [ selected, setSelected ] = useState( null );
+  const [ visible, setVisible ] = useState( false );
   const [ aboutRef, setAboutRef ] = useState( 0 );
   const [ projectsRef, setProjectsRef ] = useState( 0 );
   const [ contactRef, setContactRef ] = useState( 0 );
@@ -121,17 +131,27 @@ const App = () => {
       <Normalize />
       <GlobalStyle />
       <AppWrapper >
+        <ModalBackground 
+          visible={ visible }
+          setVisible={ setVisible }
+        />
         <LandingSection 
           selected={ selected } 
           setSelected={ setSelected }
+
         />
-        <AboutMeSection ref={ aboutSection } />
-        <ProjectSection ref={ projectSection }/>
-        <ContactSection ref={ contactSection }/>
+        <AboutMeSection 
+          ref={ aboutSection } 
+          visible={ visible } 
+          setVisible={ setVisible }
+        />
+        <ProjectSection ref={ projectSection } />
+        <ContactSection ref={ contactSection } />
         <FooterSection />
         <Nav 
           selected={ selected } 
           setSelected={ setSelected } 
+          visible={ visible }
         />
       </AppWrapper>
     </>

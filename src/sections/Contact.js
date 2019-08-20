@@ -21,14 +21,6 @@ const FourthSection = styled.section`
   padding-top: 2rem;
   margin-bottom: 2em;
 `
-
-// const ViewPDF = styled.a.attrs( props => ({
-//   href: props.pdf,
-//   target: "_blank"
-// }))`
-//   color: ${ colors.gray };
-//   margin: 2em;
-// `
 const ContactSectionTitle = styled.h2`
   color: white;
   font-family: ${ fonts.nixie };
@@ -131,24 +123,25 @@ const ContactText = styled.p`
 `
 
 
-const ContactSection = React.forwardRef( (props, ref) => (
-  <FourthSection ref={ ref } id="contact">
-    <ContactSectionTitle>Contact</ContactSectionTitle>
+const ContactSection = React.forwardRef( (props, ref) => {
+  return(
+    <FourthSection ref={ ref } id="contact" >
+      <ContactSectionTitle>Contact</ContactSectionTitle>
 
-    <ContactContainer>
-      {/* <ViewPDF pdf={ PDF }>View Resume</ViewPDF> */}
-      { content.contact.map( contact => 
-        <ContactItem key={ contact.link }>
-          { renderIcon( contact.label ) }
-          <ContactTextContainer link={ contact.link }>
-            <ContactLabel>{ contact.label }</ContactLabel>
+      <ContactContainer>
+        { content.contact.map( contact => 
+          <ContactItem key={ contact.link }>
+            { renderIcon( contact.label ) }
+            <ContactTextContainer link={ contact.link }>
+              <ContactLabel>{ contact.label }</ContactLabel>
 
-            <ContactText >{ contact.text }</ContactText>
-          </ContactTextContainer>
-        </ContactItem>  
-      )}
-    </ContactContainer>
-  </FourthSection>
-));
+              <ContactText >{ contact.text }</ContactText>
+            </ContactTextContainer>
+          </ContactItem>  
+        )}
+      </ContactContainer>
+    </FourthSection>
+  )
+});
 
 export default ContactSection;
