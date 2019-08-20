@@ -13,6 +13,13 @@ Version 1.1.0
 7. Move Download PDF to contact section with similar formatting.
 8. Decrease size of footer fonts.
 
+#Next Feature/Fix
+
+1. ReadMoreButton Visibility should show modal instead of just dropdown to avoid distracting users from other text.
+2. Synth / Human Mode to display more "professional" theme.
+
+
+
 02/08/2019 version 1.1.0
 
 # Updates
