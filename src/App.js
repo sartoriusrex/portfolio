@@ -3,7 +3,6 @@ import { Normalize } from 'styled-normalize';
 import styled, { createGlobalStyle } from 'styled-components';
 import debounce from 'lodash.debounce';
 
-import radiocity from './images/background-left.jpg';
 import adelante from './images/adelante.jpg';
 import bonjour from './images/bonjour.jpg';
 import { colors } from './styles/variables';
@@ -40,21 +39,18 @@ const AppWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background:
-    scroll linear-gradient(
+  background-image:
+    linear-gradient(
       160deg,
-      rgb( 253, 239, 249, .2 ),
-      rgb( 236, 56, 188, .2 ),
-      rgb( 115, 3, 192, .1 ), 
-      ${ colors.blackOverlay } 8%
-    ),
-    fixed top left / contain no-repeat url(${ radiocity }),
-    rgba( 0, 0, 0 );
+      rgb( 236, 56, 188 ),
+      rgb( 115, 3, 192 ), 
+      black 4%
+    );
   width: 100%;
 
   @media screen and (min-width: 500px) {
     background:
-    scroll linear-gradient(
+      linear-gradient(
       160deg,
       rgb( 253, 239, 249, .2 ),
       rgb( 236, 56, 188, .2 ),
