@@ -120,49 +120,6 @@ const App = () => {
     }
   }, [ aboutRef, projectsRef, contactRef, selected ] );
 
-  
-
-  // let scrollPosition = window.pageYOffset;
-  // let bound = window.screen.availHeight / 3;
-  // let aboutLower = aboutRef.bottom - bound;
-  // let aboutUpper = aboutRef.top - bound;
-
-  // useEffect( () => {
-    
-  //   console.log( window.pageYOffset );
-  //   // const updateWindowPosition = scrollPosition => {
-  //   //   let bound = window.screen.availHeight / 3;
-  //   //   let aboutLower = aboutRef.bottom - bound;
-  //   //   let aboutUpper = aboutRef.top - bound;
-  //   //   let projectsLower = projectsRef.bottom - bound;
-  //   //   let projectsUpper = projectsRef.top - bound;
-  //   //   let contactLower = contactRef.bottom - bound;
-  //   //   let contactUpper = contactRef.top - bound;
-  //   //   console.log(scrollPosition);
-  //   //   console.log( scrollPosition < aboutLower && scrollPosition > aboutUpper );
-
-  //   //   // if ( scrollPosition <= aboutUpper && scrollPosition > aboutLower ){
-  //   //   //   setSelected( 'about' );
-  //   //   // } else if ( scrollPosition <= projectsUpper && scrollPosition > projectsLower ) {
-  //   //   //   setSelected( 'projects' );
-  //   //   // } else if ( scrollPosition <= contactUpper && scrollPosition > contactLower ) {
-  //   //   //   setSelected( 'contact' );
-  //   //   // } else {
-  //   //   //   setSelected( null );
-  //   //   // }
-  //   // }
-
-  //   // const listenScroll = () => {
-  //   //   updateWindowPosition( window.pageYOffset );
-  //   // }
-
-  //   // window.addEventListener( 'scroll', listenScroll )
-
-  //   // return () => {
-  //   //   window.removeEventListener( 'scroll', throttle( listenScroll, 1000000 ) );
-  //   // }
-  // }, [  ]);
-
   return(
     <>
       <Normalize />
