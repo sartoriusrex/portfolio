@@ -1,6 +1,12 @@
 Version 1.1.0
 
-19/08/2-19 version 1.1.1
+20/08/19 version 1.1.2
+
+#Bug Fixes
+
+1. Refactor background image on small screens to display only linear-gradient, and change background to background-image 
+
+19/08/2019 version 1.1.1
 
 #Bug Fixes
 
