@@ -62,7 +62,8 @@ const ProjectItemTextContainer = styled.div`
 const ProjectItemTitle = styled.a.attrs( props => ({
   href: props.link,
   rel: "noopener noreferrer",
-  target: "_blank"
+  target: "_blank",
+  id: props.id
 }))`
   color: ${ props => props.color };
   font-size: 1.5em;
@@ -106,7 +107,8 @@ const ProjectLinkContainer = styled.div`
 const ProjectLink = styled.a.attrs( props => ({
   href: props.link,
   rel: "noopener noreferrer",
-  target: "_blank"
+  target: "_blank",
+  id: props.id
 }))`
   color: ${ props => props.color };
   font-size: .9em,
@@ -179,6 +181,7 @@ const ProjectSection = React.forwardRef( (props, ref) => {
             <ProjectItemTitle
               color={ subject.color }
               link={ subject.live }
+              id={ `${ subject.short }-title` }
             >
               { subject.title }
             </ProjectItemTitle>
@@ -197,6 +200,7 @@ const ProjectSection = React.forwardRef( (props, ref) => {
                 color={ subject.color }
                 onClick={ () => handleClick( subject.short )}
                 style={{background: "transparent", outline: "none", border: "none"}}
+                id={ `${ subject.short }-preview` }
               >
                 Preview
               </ProjectLink>
@@ -204,6 +208,7 @@ const ProjectSection = React.forwardRef( (props, ref) => {
               <ProjectLink
                 link={ subject.live }
                 color={ subject.color }
+                id={ `${ subject.short }-live` }
               >
                 Live
               </ProjectLink>
@@ -211,6 +216,7 @@ const ProjectSection = React.forwardRef( (props, ref) => {
               <ProjectLink
                 link={ subject.github }
                 color={ subject.color }
+                id={ `${ subject.short }-github` }
               >
                 Github
               </ProjectLink>
@@ -219,6 +225,7 @@ const ProjectSection = React.forwardRef( (props, ref) => {
                 <ProjectLink
                   link={ subject.githubServer }
                   color={ subject.color }
+                  id={ `${ subject.short }-github-two` }
                 >
                   Github 2
                 </ProjectLink>
