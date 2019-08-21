@@ -101,7 +101,8 @@ const renderIcon = label => {
 const ContactTextContainer = styled.a.attrs( props => ({
   href: props.link,
   rel: "noopener noreferrer",
-  target: "_blank"
+  target: "_blank",
+  id: props.id
 }))`
   min-width: 75%;
   height: 100%;
@@ -132,7 +133,7 @@ const ContactSection = React.forwardRef( (props, ref) => {
         { content.contact.map( contact => 
           <ContactItem key={ contact.link }>
             { renderIcon( contact.label ) }
-            <ContactTextContainer link={ contact.link }>
+            <ContactTextContainer link={ contact.link } id={ contact.label }>
               <ContactLabel>{ contact.label }</ContactLabel>
 
               <ContactText >{ contact.text }</ContactText>

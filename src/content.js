@@ -62,6 +62,7 @@ const content = {
   ],
   contact: [
     {
+      label: "Resume",
       text: "Download Resume",
       link: PDF,
     },
