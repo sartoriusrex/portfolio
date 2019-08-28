@@ -106,7 +106,7 @@ const AboutMeSection = React.forwardRef( ( props, ref ) => {
     window.innerWidth > 1199 ?
     setVisible( true ) && setWidth( "big" ) :
     setWidth( "small" );
-  },[])
+  },[ setVisible ])
 
   const toggleVisible = () => {
     visible === false ?
