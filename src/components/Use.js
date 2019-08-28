@@ -72,6 +72,7 @@ const Use = () => (
           <ListItem>Redux, Redux-Form</ListItem>
           <ListItem>Styled-components</ListItem>
           <ListItem>jQuery</ListItem>
+          <ListItem>Jest, Enzyme</ListItem>
         </List>
       </ListContainer>
     </UseTextContainer>

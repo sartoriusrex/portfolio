@@ -99,14 +99,14 @@ const AboutMeSection = React.forwardRef( ( props, ref ) => {
         () => updateWidth( window.window.innerWidth ) 
       );
     }
-  }, [ props, width, setVisible ] )
+  }, [ visible, setVisible , width ] )
 
   // compare window size and set visible to true of greater than 1199px and width to small, only on mount and unmount;
   useEffect( () => {
     window.innerWidth > 1199 ?
     setVisible( true ) && setWidth( "big" ) :
     setWidth( "small" );
-  },[ setVisible ])
+  },[])
 
   const toggleVisible = () => {
     visible === false ?
