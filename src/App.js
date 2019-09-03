@@ -1,7 +1,7 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Normalize } from 'styled-normalize';
 import styled, { createGlobalStyle } from 'styled-components';
-import debounce from 'lodash.debounce';
+// import debounce from 'lodash.debounce';
 
 import adelante from './images/adelante.jpg';
 import bonjour from './images/bonjour.jpg';
@@ -72,59 +72,74 @@ const AppWrapper = styled.main`
   }
 `
 
+// const initialState = { selected: null };
+
+// const reducer = ( state, action ) => {
+//   switch ( action.type ) {
+//     case "contact":
+//       return { selected: "contact" };
+//     case "projects":
+//       return { selected: "projects" };
+//     case "about":
+//       return { selected: "about" };
+//     default:
+//       return { selected: null }
+//   }
+// }
+
 const App = () => {
-  const [ selected, setSelected ] = useState( null );
+  // const [ state, dispatch ] = useReducer( reducer, initialState );
   const [ visible, setVisible ] = useState( false );
-  const [ aboutRef, setAboutRef ] = useState( 0 );
-  const [ projectsRef, setProjectsRef ] = useState( 0 );
-  const [ contactRef, setContactRef ] = useState( 0 );
+  // const [ aboutRef, setAboutRef ] = useState( 0 );
+  // const [ projectsRef, setProjectsRef ] = useState( 0 );
+  // const [ contactRef, setContactRef ] = useState( 0 );
   
-  const bound = window.screen.availHeight / 3;
+  // const bound = window.screen.availHeight / 3;
 
-  const aboutSection = useCallback( node => {
-    if( node !== null ) {
-      // setAboutY( node.getBoundingClientRect().top + 100 );
-      setAboutRef( node.getBoundingClientRect().top - bound );
-    }
-  }, [ bound ]);
+  // const aboutSection = useCallback( node => {
+  //   if( node !== null ) {
+  //     // setAboutY( node.getBoundingClientRect().top + 100 );
+  //     setAboutRef( node.getBoundingClientRect().top - bound );
+  //   }
+  // }, [ bound ]);
 
-  const projectSection = useCallback( node => {
-    if( node !== null ) {
-      setProjectsRef( node.getBoundingClientRect().top - bound );
-    }
-  }, [ bound ]);
+  // const projectSection = useCallback( node => {
+  //   if( node !== null ) {
+  //     setProjectsRef( node.getBoundingClientRect().top - bound );
+  //   }
+  // }, [ bound ]);
 
-  const contactSection = useCallback( node => {
-    if( node !== null ) {
-      setContactRef( node.getBoundingClientRect().top - bound );
-    }
-  }, [ bound ]);
+  // const contactSection = useCallback( node => {
+  //   if( node !== null ) {
+  //     setContactRef( node.getBoundingClientRect().top - bound );
+  //   }
+  // }, [ bound ]);
 
-  useEffect( () => {
-    const listenScroll = debounce( function( scrollPosition ) {
-      if( scrollPosition > contactRef ){
-        selected !== 'contact' && setSelected( 'contact' )
-      } else if ( scrollPosition > projectsRef ) {
-        selected !== 'projects' && setSelected( 'projects' );
-      } else if ( scrollPosition > aboutRef ) {
-        selected !== 'about' && setSelected( 'about')
-      } else {
-        setSelected( null );
-      }
-    }, 250 );
+  // useEffect( () => {
+  //   const listenScroll = debounce( function( scrollPosition ) {
+  //     if( scrollPosition > contactRef ){
+  //       state.selected !== 'contact' && dispatch({ type: 'contact' })
+  //     } else if ( scrollPosition > projectsRef ) {
+  //       state.selected !== 'projects' && dispatch({ type: 'projects' });
+  //     } else if ( scrollPosition > aboutRef ) {
+  //       state.selected !== 'about' && dispatch({ type: 'about' })
+  //     } else {
+  //       dispatch({ selected: null });
+  //     }
+  //   }, 250 );
 
-    window.addEventListener( 
-      'scroll', 
-      () => listenScroll( window.pageYOffset )
-    );
+  //   window.addEventListener( 
+  //     'scroll', 
+  //     () => listenScroll( window.pageYOffset )
+  //   );
 
-    return () => {
-      window.removeEventListener( 
-        'scroll', 
-        () => listenScroll( window.pageYOffset )
-      );
-    }
-  }, [ aboutRef, projectsRef, contactRef, selected ] );
+  //   return () => {
+  //     window.removeEventListener( 
+  //       'scroll', 
+  //       () => listenScroll( window.pageYOffset )
+  //     );
+  //   }
+  // }, [ aboutRef, projectsRef, contactRef, state.selected ] );
 
   return(
     <>
@@ -136,21 +151,23 @@ const App = () => {
           setVisible={ setVisible }
         />
         <LandingSection 
-          selected={ selected } 
-          setSelected={ setSelected }
-
+          // setSelected={ dispatch }
         />
         <AboutMeSection 
-          ref={ aboutSection } 
+          // ref={ aboutSection } 
           visible={ visible } 
           setVisible={ setVisible }
         />
-        <ProjectSection ref={ projectSection } />
-        <ContactSection ref={ contactSection } />
+        <ProjectSection 
+          // ref={ projectSection } 
+        />
+        <ContactSection 
+          // ref={ contactSection } 
+        />
         <FooterSection />
         <Nav 
-          selected={ selected } 
-          setSelected={ setSelected } 
+          // selected={ state.selected } 
+          // setSelected={ dispatch } 
           visible={ visible }
         />
       </AppWrapper>

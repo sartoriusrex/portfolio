@@ -108,7 +108,9 @@ const downArrowStyle = {
   marginTop: '4rem',
 }
 
-const LandingSection = ({ selected, setSelected }) => {
+const LandingSection = (
+  // { setSelected }
+  ) => {
 
   return(
     <FirstSection id="landing" >
@@ -133,7 +135,7 @@ const LandingSection = ({ selected, setSelected }) => {
       <DownArrowContainer href="#about">
         <DownArrow 
           style={ downArrowStyle }
-          onClick={ () => setSelected('about') }
+          // onClick={ () => setSelected({ type: 'about' }) }
         />
       </DownArrowContainer>
     </FirstSection>

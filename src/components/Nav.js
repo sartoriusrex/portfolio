@@ -105,24 +105,24 @@ const Nav = ({ selected, setSelected, visible }) => {
   return(
     <Navbar visible={ visible }>
       <Button 
-        onClick={ () => setSelected('about') } 
-        selected={ selected === 'about' ? selected : null }
+        // onClick={ () => setSelected({ type: 'about' }) } 
+        // selected={ selected === 'about' ? selected : null }
         href="#about"
       >
         About
       </Button>
     
       <Button 
-        onClick={ () => setSelected('projects') } 
-        selected={ selected === 'projects' ? selected : null } 
+        // onClick={ () => setSelected({ type: 'projects' }) } 
+        // selected={ selected === 'projects' ? selected : null } 
         href="#projects"
       >
         Portfolio
       </Button>
     
       <Button 
-        onClick={ () => setSelected('contact') } 
-        selected={ selected === 'contact' ? selected : null } 
+        // onClick={ () => setSelected({ type: 'contact' }) } 
+        // selected={ selected === 'contact' ? selected : null } 
         href="#contact"
       >
         Contact
